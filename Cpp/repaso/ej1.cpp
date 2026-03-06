@@ -1,3 +1,17 @@
+/*
+Crear la estructura Empleado que tiene un nombre, apellido, fecha de nacimiento,
+sexo y salario.
+Se pide la función empleadoConMayorSueldo que recibe por parámetro un vector con
+todos los empleados de la empresa y otro vector vacío donde se guardarán los
+empleados que tienen salario menor a $400.000.
+La función deberá recorrer todos los empleados de la empresa y retornar el de mayor
+sueldo. Además, a medida que va recorriendo los empleados, debe agregar al otro
+vector los empleados cuyo salario es menor o igual a $400.000.
+Por lo tanto, luego de llamar a la función se quiere mostrar en el main el empleado
+con mayor sueldo y mostrar el nombre y apellido de todos los empleados con salario
+menor o igual a $400.000
+*/
+
 #include <iostream>
 #include <string>
 #include <vector>
