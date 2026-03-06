@@ -26,7 +26,7 @@ void girarDerecha(char origen[N][N], char destino[N][N])
     {
         for (j = 0; j < N; j++)
         {
-            destino[j][i] = origen[i][j];
+            destino[j][i] = origen[N - (i + 1)][j];
         }
     }
 }
@@ -50,7 +50,10 @@ int main()
 
     char girada[N][N];
 
+    char giarada2[N][N];
+
     girarDerecha(matriz, girada);
+    girarDerecha(girada, giarada2);
 
     cout << "Matriz original:\n\n";
     mostrarMatriz(matriz);
@@ -62,6 +65,8 @@ int main()
 
     cout << "Matriz girada 90 grados a la derecha:\n\n";
     mostrarMatriz(girada);
+    cout << endl;
+    mostrarMatriz(giarada2);
 
     return 0;
 }
