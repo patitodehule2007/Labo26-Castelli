@@ -8,7 +8,6 @@ public class ReemplazoLetra {
         char ReplacingLetter = 'e';
         char newLetter;
 
-        StringBuilder sb = new StringBuilder(Palabra);
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Palabra original: ");
@@ -17,12 +16,8 @@ public class ReemplazoLetra {
         System.out.println("Ingrese el caracter que remplazara a la e: ");
         newLetter = scanner.next().charAt(0);
 
-        for (int i = 0; i < Palabra.length() ; i++) {
-            if( sb.charAt(i) == ReplacingLetter) {
-                sb.setCharAt(i, newLetter);
-            }
-        }
+
         System.out.println("Palabra modificada: ");
-        System.out.println(sb.toString());
+        System.out.println(Palabra.replace(ReplacingLetter,newLetter));
     }
 }
