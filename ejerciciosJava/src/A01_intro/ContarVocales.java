@@ -8,6 +8,7 @@ public class ContarVocales {
     public static void main(String[] args) {
         List<Character> Vocales = new ArrayList<>(List.of('a','e', 'i', 'o', 'u'));
         String Palabra = "Domingo";
+        Palabra = Palabra.toLowerCase();
         int numVocales = 0;
 
 
