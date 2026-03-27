@@ -6,11 +6,11 @@ public class Circulo {
 
     public Circulo(){
             this.radio = 2;
-        }
-        public  Circulo(int radio){
-            this.radio = radio;
-        }
-        public void  setRadio(int radio){
+    }
+    public  Circulo(int radio){
+        this.radio = radio;
+    }
+    public void  setRadio(int radio){
             this.radio = radio;
         }
         public  int  getRadio(){

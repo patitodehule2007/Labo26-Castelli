@@ -19,6 +19,19 @@ public class Fecha {
             "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado","Domingo"
     ));
 
+    public int getAnio() {
+        return anio;
+    }
+
+    public int getMes() {
+        return mes;
+    }
+
+    public int getDia() {
+        return dia;
+    }
+
+
     public Fecha(){
         this.dia = 1;
         this.mes = 1;
@@ -66,13 +79,13 @@ public class Fecha {
         return dias.get(aux.getDayOfWeek().getValue() - 1) + " " + this.dia + " de "  + meses.get(mes - 1) + " del "+  anio;
     }
     public  boolean igualQue(Fecha fechaComp){
-        return (this.dia == fechaComp.dia && this.mes == fechaComp.mes && this.anio == fechaComp.anio);
+        return (this.dia == fechaComp.getDia() && this.mes == fechaComp.getMes() && this.anio == fechaComp.getAnio());
     }
     public  boolean menorQue(Fecha fechaComp){
-        return (this.dia > fechaComp.dia && this.mes > fechaComp.mes && this.anio > fechaComp.anio);
+        return (this.dia > fechaComp.getDia() && this.mes > fechaComp.getMes() && this.anio > fechaComp.getAnio());
     }
     public  boolean mayorQue(Fecha fechaComp){
-        return !(this.dia > fechaComp.dia && this.mes > fechaComp.mes && this.anio > fechaComp.anio);
+        return !(this.dia > fechaComp.getDia() && this.mes > fechaComp.getMes() && this.anio > fechaComp.getAnio());
     }
 
 
