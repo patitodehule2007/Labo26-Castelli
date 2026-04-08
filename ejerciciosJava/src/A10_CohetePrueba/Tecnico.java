@@ -34,6 +34,9 @@ public class Tecnico {
 		  res = true;
 	  }
 	  return res;
+  },
+  public  void  activarPropulsores(int cantidad){
+		coheteAsignado.activarPropulsores(cantidad);
   }
 }
 
