@@ -3,25 +3,38 @@ package A09_Musica;
 import A04_SeresVivos.Persona;
 
 public class Main {
-    public  static  void main(String[] Args){
+    public static void main(String[] args) {
+        // 1. Creamos algunos autores (Personas)
+        Persona autor1 = new Persona("Charly García", "Rock", 72);
+        Persona autor2 = new Persona("Gustavo Cerati", "Rock/Pop", 55);
 
-                Persona fito = new Persona("Fito Paez", "Argentina", 61);
+        // 2. Creamos instancias de Cancion
+        Cancion c1 = new Cancion("Hablando a tu corazón", autor1);
+        Cancion c2 = new Cancion("Crimen", autor2);
+        Cancion c3 = new Cancion("Puente", autor2);
 
-                Cancion c1 = new Cancion("El amor despues del amor", fito);
+        // 3. Creamos el objeto CD
+        CD miAlbum = new CD();
 
+        // 4. Probamos el método agregar()
+        miAlbum.agregar(c1);
+        miAlbum.agregar(c2);
 
-                Cancion c2 = new Cancion();
-                c2.setTitulo("Vivir así es morir de amor");
-                c2.setAutor(new Persona("Camilo Sesto", "España", 72));
+        // 5. Probamos grabarCancion() en una posición específica (al inicio por ejemplo)
+        miAlbum.grabarCancion(c3, 0);
 
+        System.out.println("--- Lista de canciones inicial ---");
+        miAlbum.listarCanciones();
 
-                System.out.println("--- Canción 1 ---");
-                System.out.println("Título: " + c1.getTitulo());
-                System.out.println("Autor: " + c1.getAutor().getNombre());
+        // 6. Probamos verCancion()
+        System.out.println("\nLa canción en la posición 1 es: " + miAlbum.verCancion(1).getTitulo());
 
-                System.out.println("\n--- Canción 2 ---");
-                System.out.println("Título: " + c2.getTitulo());
-                System.out.println("Autor: " + c2.getAutor().getNombre());
+        // 7. Probamos eliminar()
+        System.out.println("\nEliminando la canción en la posición 2...");
+        miAlbum.eliminar(2);
 
+        // 8. Listar de nuevo para ver cambios
+        System.out.println("\n--- Lista de canciones final ---");
+        miAlbum.listarCanciones();
     }
 }
