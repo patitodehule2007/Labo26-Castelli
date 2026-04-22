@@ -57,6 +57,9 @@ public class Estudiante {
     public void setListaNotas(ArrayList<Integer> listaNotas) {
         this.listaNotas = listaNotas;
     }
+    public void agregarMateria(Materia materia){
+        this.materias.add(materia);
+    }
     public  void agregarNota(Integer nota){
         listaNotas.add(nota);
     }
@@ -86,6 +89,15 @@ public class Estudiante {
             sumNotas+=nota;
         }
         return sumNotas / this.listaNotas.size();
+    }
+    public  Integer getEdad(){
+        return LocalDate.now().getYear() - this.fechaNacimiento.getYear();
+    }
+
+    public void inscribir(Materia materia){
+        materia.agregarAlumno(this);
+        this.agregarMateria(materia);
+
     }
 
 }

@@ -41,7 +41,7 @@ public class Materia {
     public  int promedioEdad(){
         int  sumEdades = 0;
         for(Estudiante estudiante: listaEstudiantes){
-            sumEdades+= LocalDate.now().getYear() - estudiante.getFechaNacimiento().getYear();
+            sumEdades+= estudiante.getEdad();
         }
         return sumEdades/listaEstudiantes.size();
 
@@ -49,5 +49,13 @@ public class Materia {
 
     public  void  agregarContenido(String tema){
         this.listaContenidos.add(tema);
+    }
+    public  void  agregarAlumno(Estudiante alumno){
+        listaEstudiantes.add(alumno);
+    }
+    public void  mostrarAlumno(){
+        for (Estudiante estudiante:this.listaEstudiantes){
+            System.out.println(estudiante.getNombre() + " " + estudiante.getApellido());
+        }
     }
 }
