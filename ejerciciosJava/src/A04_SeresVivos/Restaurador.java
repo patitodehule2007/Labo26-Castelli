@@ -1,21 +1,17 @@
-package A08_Museo;
+package A04_SeresVivos;
 
 import A05_Fechas.Fecha;
+import A08_Museo.Cuadro;
 
 import java.time.LocalDate;
 
-public class Restaurador {
-    private  String nombre;
-    private  String apellido;
+public class Restaurador extends Persona {
     private  int dni;
-    private Fecha fechaNacimiento;
     private  int aniosExperiencia;
 
-    public Restaurador(String nombre, String apellido, int dni, Fecha fechaNacimiento, int aniosExperiencia) {
-        this.nombre = nombre;
-        this.apellido = apellido;
+    public Restaurador(String nombre, String apellido,String direccion, int dni, LocalDate fechaNacimiento, int aniosExperiencia) {
+        super(nombre,apellido,direccion,fechaNacimiento);
         this.dni = dni;
-        this.fechaNacimiento = fechaNacimiento;
         this.aniosExperiencia = aniosExperiencia;
     }
 
@@ -43,11 +39,11 @@ public class Restaurador {
         this.dni = dni;
     }
 
-    public Fecha getFechaNacimiento() {
-        return fechaNacimiento;
+    public LocalDate getFechaNacimiento() {
+        return super.fechaNacimiento;
     }
 
-    public void setFechaNacimiento(Fecha fechaNacimiento) {
+    public void setFechaNacimiento(LocalDate fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
     }
 
@@ -60,14 +56,14 @@ public class Restaurador {
     }
 
     public  void  restaurarObra(Cuadro cuadro){
-        System.out.println("Antes de la restuaracion el cuadro estaba asi: " + cuadro.estado + "/ 10");
+        System.out.println("Antes de la restuaracion el cuadro estaba asi: " + cuadro.getEstado() + "/ 10");
         if (cuadro.getFechaCreacion().getAnio() -25 > LocalDate.now().getYear()){
             cuadro.setEstado(cuadro.getEstado() + 2 > 10 ? 10 : cuadro.getEstado() + 2);
         }else {
             cuadro.setEstado(cuadro.getEstado() + 3 > 10 ? 10 : cuadro.getEstado() + 3);
 
         }
-        System.out.println("Ahora el cuadro esta asi: " + cuadro.estado + "/ 10");
+        System.out.println("Ahora el cuadro esta asi: " + cuadro.getEstado() + "/ 10");
 
 
     }

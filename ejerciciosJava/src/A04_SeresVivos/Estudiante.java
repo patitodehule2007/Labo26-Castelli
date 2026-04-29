@@ -1,20 +1,18 @@
-package A11_Colegio;
+package A04_SeresVivos;
+
+import A11_Colegio.Materia;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class Estudiante {
-    private  String nombre;
-    private  String apellido;
+public class Estudiante extends Persona {
     private ArrayList<Materia> materias;
-    private LocalDate fechaNacimiento;
     private ArrayList<Integer> listaNotas;
 
 
-    public Estudiante(String nombre, String apellido, LocalDate fechaNacimiento,ArrayList<Materia> materias) {
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.fechaNacimiento = fechaNacimiento;
+    public Estudiante(String nombre, String apellido,String direccion, LocalDate fechaNacimiento,ArrayList<Materia> materias) {
+
+        super(nombre,apellido,direccion,fechaNacimiento);
         this.materias = materias;
         this.listaNotas = new ArrayList<Integer>();
     }
@@ -27,11 +25,11 @@ public class Estudiante {
     }
 
     public String getNombre() {
-        return nombre;
+        return super.nombre;
     }
 
     public void setNombre(String nombre) {
-        this.nombre = nombre;
+        super.nombre = nombre;
     }
 
     public String getApellido() {
@@ -91,7 +89,7 @@ public class Estudiante {
         return sumNotas / this.listaNotas.size();
     }
     public  Integer getEdad(){
-        return LocalDate.now().getYear() - this.fechaNacimiento.getYear();
+        return (super.getEdad());
     }
 
     public void inscribir(Materia materia){

@@ -1,4 +1,4 @@
-package A10_CohetePrueba;
+package A03_Vehiculos;
 
 public class Cohete {
     private String nombre;

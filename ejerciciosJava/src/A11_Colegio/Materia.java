@@ -1,6 +1,7 @@
 package A11_Colegio;
 
-import java.time.LocalDate;
+import A04_SeresVivos.Estudiante;
+
 import java.util.ArrayList;
 
 public class Materia {

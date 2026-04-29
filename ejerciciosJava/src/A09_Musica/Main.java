@@ -2,11 +2,13 @@ package A09_Musica;
 
 import A04_SeresVivos.Persona;
 
+import java.time.LocalDate;
+
 public class Main {
     public static void main(String[] args) {
         // 1. Creamos algunos autores (Personas)
-        Persona autor1 = new Persona("Charly García", "Rock", 72);
-        Persona autor2 = new Persona("Gustavo Cerati", "Rock/Pop", 55);
+        Persona autor1 = new Persona("Charly García","juan", "Rock", LocalDate.now());
+        Persona autor2 = new Persona("Gustavo Cerati","juan", "Rock/Pop", LocalDate.now());
 
         // 2. Creamos instancias de Cancion
         Cancion c1 = new Cancion("Hablando a tu corazón", autor1);

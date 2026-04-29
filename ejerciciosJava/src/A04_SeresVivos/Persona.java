@@ -1,14 +1,18 @@
 package A04_SeresVivos;
 
-public class Persona {
-    private String nombre;
-    private String direccion;
-    private int edad;
+import java.time.LocalDate;
 
-    public Persona(String nombre, String direccion, int edad){
+public class Persona {
+    protected String nombre;
+    protected String direccion;
+    protected String apellido;
+    protected LocalDate fechaNacimiento;
+
+    public Persona(String nombre,String apellido, String direccion, LocalDate fechaNacimiento){
         this.nombre = nombre;
         this.direccion = direccion;
-        this.edad = edad;
+        this.fechaNacimiento = fechaNacimiento;
+        this.apellido = apellido;
     }
 
     public void setNombre(String nombre) {
@@ -19,12 +23,9 @@ public class Persona {
         return nombre;
     }
 
-    public void setEdad(int edad) {
-        this.edad = edad;
-    }
 
-    public int getEdad() {
-        return edad;
+    public Integer getEdad() {
+        return  this.fechaNacimiento.getYear() - LocalDate.now().getYear();
     }
 
     public void setDireccion(String direccion) {
@@ -36,7 +37,7 @@ public class Persona {
     }
     public void mostrarDatos(){
         System.out.println("Nombre: " + this.nombre);
-        System.out.println("Edad: " + this.edad);
+        System.out.println("Edad: " + this.getEdad());
         System.out.println("Direccion: " + this.direccion);
     }
 }

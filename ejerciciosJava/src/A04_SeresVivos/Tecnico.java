@@ -1,17 +1,15 @@
-package A10_CohetePrueba;
+package A04_SeresVivos;
 
 import A05_Fechas.Fecha;
+import A03_Vehiculos.Cohete;
 
-public class Tecnico {
-    private String nombre;
-    private String apellido;
-    private Fecha fechaNacimiento;
+import java.time.LocalDate;
+
+public class Tecnico extends Persona {
     private String especialidad;
     private Cohete coheteAsignado;
-    public Tecnico(String nombre,String apellido,Fecha fechaNacimiento,String especialidad,Cohete coheteAsignado){
-	this.nombre = nombre;
-	this.apellido = apellido;
-	this.fechaNacimiento = fechaNacimiento;
+    public Tecnico(String nombre, String apellido, LocalDate fechaNacimiento, String especialidad, String direccion, Cohete coheteAsignado){
+	super(nombre,apellido,direccion,fechaNacimiento);
 	this.especialidad = especialidad;
 	this.coheteAsignado = coheteAsignado;
     }

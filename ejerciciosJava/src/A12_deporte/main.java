@@ -1,5 +1,7 @@
 package A12_deporte;
 
+import A04_SeresVivos.Participante;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -8,12 +10,12 @@ public class main {
     public static void main(String[] args) {
         ArrayList<Participante> listaA = new ArrayList<>();
         for (int i = 1; i <= 11; i++) {
-            listaA.add(new Participante(i, LocalDate.of(1990, 1, i), "ApellidoA" + i, "NombreA" + i));
+            listaA.add(new Participante(i, LocalDate.of(1990, 1, i), ("ApellidoA" + i), "NombreA" + i,"bolivia"));
         }
 
         ArrayList<Participante> listaB = new ArrayList<>();
         for (int i = 1; i <= 11; i++) {
-            listaB.add(new Participante(i, LocalDate.of(1995, 5, i), "ApellidoB" + i, "NombreB" + i));
+            listaB.add(new Participante(i, LocalDate.of(1995, 5, i), "ApellidoB" + i, "NombreB" + i,"bolivia"));
         }
 
 

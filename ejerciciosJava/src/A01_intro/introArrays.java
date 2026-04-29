@@ -1,6 +1,7 @@
 package A01_intro;
 import A04_SeresVivos.Persona;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 public class introArrays {
@@ -34,10 +35,10 @@ public class introArrays {
             }
 
             List<Persona> personas = new ArrayList<>();
-            personas.add(new Persona("Ana", " ",25));
-            personas.add(new Persona("Carlos"," ", 42));
-            personas.add(new Persona("Lucía"," " ,31));
-            personas.add(new Persona("Diego"," ", 18));
+            personas.add(new Persona("Ana", "perez"," ", LocalDate.now()));
+            personas.add(new Persona("Carlos", "perez"," ", LocalDate.now()));
+            personas.add(new Persona("Lucía", "perez"," " ,LocalDate.now()));
+            personas.add(new Persona("Diego", "perez"," ", LocalDate.now()));
 
             System.out.println("C) Personas mayores de 30 años:");
             for (Persona p : personas) {

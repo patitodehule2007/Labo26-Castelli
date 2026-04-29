@@ -1,22 +1,18 @@
-package A12_deporte;
+package A04_SeresVivos;
 
 import java.time.LocalDate;
 
-public class Participante {
-    private String nombre;
+public class Participante extends Persona {
     private String apellido;
-    private LocalDate fechaNacimiento;
     private  int numeroCamiseta;
 
-    public Participante(int numeroCamiseta, LocalDate fechaNacimiento, String apellido, String nombre) {
+    public Participante(int numeroCamiseta, LocalDate fechaNacimiento, String apellido, String nombre,String direccion) {
+        super(nombre,apellido,direccion,fechaNacimiento);
         this.numeroCamiseta = numeroCamiseta;
-        this.fechaNacimiento = fechaNacimiento;
-        this.apellido = apellido;
-        this.nombre = nombre;
     }
 
     public String getNombre() {
-        return nombre;
+        return super.nombre;
     }
 
     public void setNombre(String nombre) {
@@ -32,7 +28,7 @@ public class Participante {
     }
 
     public LocalDate getFechaNacimiento() {
-        return fechaNacimiento;
+        return super.fechaNacimiento;
     }
 
     public void setFechaNacimiento(LocalDate fechaNacimiento) {

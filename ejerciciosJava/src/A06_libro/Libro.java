@@ -3,6 +3,8 @@ package A06_libro;
 import A04_SeresVivos.Persona;
 import A05_Fechas.Fecha;
 
+import java.time.LocalDate;
+
 public class Libro {
     private String nombre;
     private Persona autor;
@@ -26,7 +28,7 @@ public class Libro {
     }
     public  Libro(String isbn,int cantidadHojas,Fecha fechaPublicacion){
         this.nombre = "las aventuras de pepe";
-        this.autor = new Persona("pepe","bolivia",19);
+        this.autor = new Persona("pepe", "perez","bolivia", LocalDate.now());
         this.isbn = isbn;
         this.cantidadHojas = cantidadHojas;
         this.fechaPublicacion = fechaPublicacion;
