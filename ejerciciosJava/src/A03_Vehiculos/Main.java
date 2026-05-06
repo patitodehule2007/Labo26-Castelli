@@ -3,7 +3,7 @@ package A03_Vehiculos;
 public class Main {
     public static void main(String[] args) {
         // Autos
-        Coche autoPrueba = new Coche("Marcedes","Ni idea", "negro");
+        Coche autoPrueba = new Coche("Marcedes","Ni idea", "negro",8,2000,799,"juan");
         System.out.println("Marca: " + autoPrueba.getMarca());
         System.out.println("Velocidad: " + autoPrueba.getVelocidad());
         System.out.println("Acelerando..." );

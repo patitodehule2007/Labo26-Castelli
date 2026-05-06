@@ -1,41 +1,38 @@
 package A03_Vehiculos;
 
-public class Coche {
-    private  String marca;
-    private  String modelo;
-    private  String color;
+public class Coche extends Vehiculo {
     private double velocidad;
+    private String patente;
+    private  boolean descapotable;
 
-    public  Coche(String marca,String modelo, String color){
-        this.marca = marca;
-        this.modelo = modelo;
-        this.color = color;
-        this.velocidad = 0;
+    public  Coche(String marca,String modelo, String color,int numeroRuedas,int anioFabricacion,double velocidad,String patente){
+        super(marca,modelo,color,numeroRuedas,anioFabricacion);
+        this.velocidad = velocidad;
+        this.patente = patente;
+        this.descapotable = false;
+
     }
 
-    public String getMarca() {
-        return this.marca;
+    public boolean isDescapotable() {
+        return descapotable;
     }
 
-    public void setMarca(String marca) {
-        this.marca = marca;
+    public void setDescapotable(boolean descapotable) {
+        this.descapotable = descapotable;
     }
 
-    public String getColor() {
-        return color;
+    public String getPatente() {
+        return patente;
     }
 
-    public void setColor(String color) {
-        this.color = color;
+    public void setPatente(String patente) {
+        this.patente = patente;
     }
 
-    public String getModelo() {
-        return modelo;
+    private void setVelocidad(double velocidad){
+        this.velocidad = velocidad;
     }
 
-    public void setModelo(String modelo) {
-        this.modelo = modelo;
-    }
 
     public double getVelocidad() {
         return velocidad;
