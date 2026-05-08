@@ -28,8 +28,8 @@ public class Buffet {
     }
     private  double calcularPrecio(Persona persona,Plato plato){
         double precio = plato.getPrecio();
-        if(persona.getClass() == Profesor.class){
-            precio = precio * (1 +((double)((Profesor) persona).getPorcentajeDescuento())/100);
+        if(persona instanceof Profesor p){
+            precio = precio * (1 +((double)(p).getPorcentajeDescuento())/100);
         }
         return  precio;
     }
