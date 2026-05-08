@@ -87,4 +87,7 @@ public class EmpresaAutos {
         }
         return false;
     }
+    public void  cargarCamioneta(Camion camioneta,int peso){
+        camioneta.cargar(peso);
+    }
 }
