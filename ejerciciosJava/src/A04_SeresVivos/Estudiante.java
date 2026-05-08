@@ -5,16 +5,19 @@ import A11_Colegio.Materia;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class Estudiante extends Persona {
+public class Estudiante extends PersonaColegio {
     private ArrayList<Materia> materias;
     private ArrayList<Integer> listaNotas;
+    private String clase;
 
 
-    public Estudiante(String nombre, String apellido,String direccion, LocalDate fechaNacimiento,ArrayList<Materia> materias) {
+
+    public Estudiante(String nombre, String apellido,String direccion, LocalDate fechaNacimiento,ArrayList<Materia> materias,String clase) {
 
         super(nombre,apellido,direccion,fechaNacimiento);
         this.materias = materias;
         this.listaNotas = new ArrayList<Integer>();
+        this.clase =clase;
     }
 
     public ArrayList<Materia> getMateria(){
