@@ -4,9 +4,9 @@ import A04_SeresVivos.Persona;
 import A04_SeresVivos.Profesor;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Comparator;
-import java.util.Date;
 import java.util.List;
 
 public class Buffet {
@@ -29,15 +29,15 @@ public class Buffet {
     private  double calcularPrecio(Persona persona,Plato plato){
         double precio = plato.getPrecio();
         if(persona instanceof Profesor p){
-            precio = precio * (1 +((double)(p).getPorcentajeDescuento())/100);
+            // si es profe aplico descuento
+            precio = precio * (1 - ((double)(p).getPorcentajeDescuento())/100);
         }
         return  precio;
     }
 
-
-    public void ordenarPlato(Persona persona, Plato plato){
+    public void ordenarPlato(Persona persona, Plato plato, LocalTime horaEntrega){
         double precio = this.calcularPrecio(persona,plato);
-        Pedido pedido = new Pedido(plato ,persona,LocalDate.now().plusDays(13),precio);
+        Pedido pedido = new Pedido(plato ,persona,horaEntrega,precio);
         this.pedidoList.add(pedido);
     }
     public void  insertarPlato(Plato plato){
@@ -58,26 +58,34 @@ public class Buffet {
         }
         return  false;
     }
-    //  contamos platos para el top
+    // cuenta cuantas veces se pidio un plato
     private  int  countPlatosUsage(Plato plato){
-        int i ;
-        for(i = 0;i < this.pedidoList.size();i++){
-            if(this.pedidoList.get(i).getPato().equals(plato)){
-                i++;
+        int cant = 0;
+        for(Pedido pedido : this.pedidoList){
+            if(pedido.getPato().equals(plato)){
+                cant++;
             }
         }
-        return i;
+        return  cant;
+    }
+
+    public List<Pedido> listarPendientes(){
+        List<Pedido> pendientes = new ArrayList<>();
+        for(Pedido pedido : this.pedidoList){
+            if(!pedido.isEntregado()){
+                pendientes.add(pedido);
+            }
+        }
+        return pendientes;
     }
 
     public ArrayList<Plato> top(int cantidad){
-        // copiamos para no modificar la tabla que tenemos
+        // copio para no tocar la lista original
         ArrayList<Plato> copia = new ArrayList<>(this.platoList);
-        // la ordenamos llamando al metodo q hicmos para ver los platos
         copia.sort(Comparator.comparingInt(this::countPlatosUsage).reversed());
-        if(cantidad > this.pedidoList.size()){
+        if(cantidad > this.platoList.size()){
             return  copia;
         }
-        // recortamos hasta el limite
         return new  ArrayList<>(copia.subList(0,cantidad));
     }
     public void mostrarPlatosACocinar() {

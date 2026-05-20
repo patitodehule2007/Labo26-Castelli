@@ -3,22 +3,23 @@ package A11_Colegio;
 import A04_SeresVivos.Persona;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
 
 public class Pedido {
     private Plato pato;
     private Persona persona;
     private LocalDate fechaCreacion;
-    private LocalDate fechaEntrega;
+    private LocalTime horaEntrega;
     private boolean entregado;
     // si bien el precio se puede calcular tomamos que una vez creado el pedido el precio no cambia
     // x mas de q se cambie el descuento
     private double precio;
 
-    public Pedido(Plato pato, Persona persona, LocalDate fechaEntrega,double precio) {
+    public Pedido(Plato pato, Persona persona, LocalTime horaEntrega, double precio) {
         this.pato = pato;
         this.persona = persona;
         this.fechaCreacion = LocalDate.now();
-        this.fechaEntrega = fechaEntrega;
+        this.horaEntrega = horaEntrega;
         this.precio = precio;
         this.entregado = false;
     }
@@ -39,8 +40,8 @@ public class Pedido {
         return fechaCreacion;
     }
 
-    public LocalDate getFechaEntrega() {
-        return fechaEntrega;
+    public LocalTime getHoraEntrega() {
+        return horaEntrega;
     }
 
     public void setEntregado(boolean entregado) {

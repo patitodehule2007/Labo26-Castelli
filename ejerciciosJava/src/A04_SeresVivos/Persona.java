@@ -23,6 +23,10 @@ public class Persona {
         return nombre;
     }
 
+    public String getApellido() {
+        return apellido;
+    }
+
 
     public Integer getEdad() {
         return  this.fechaNacimiento.getYear() - LocalDate.now().getYear();
