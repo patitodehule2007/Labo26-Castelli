@@ -13,11 +13,14 @@ public class Llamada {
     private  int duracion;
     private double costo;
 
-    public Llamada(Persona empleadoOrigen, Persona empleadoDestino, LocalDate fechaLlamada, int duracion) {
+    public Llamada(Empleado empleadoOrigen, Empleado empleadoDestino, LocalDate fechaLlamada, int duracion) {
         this.empleadoOrigen = empleadoOrigen;
         this.empleadoDestino = empleadoDestino;
         this.fechaLlamada = fechaLlamada;
         this.duracion = duracion;
+    }
+    public double obtenerMinutoExterior(Empleado empleado){
+        return  0;
     }
 
     public double calcularCosto(){

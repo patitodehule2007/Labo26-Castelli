@@ -29,10 +29,8 @@ public class Sistema {
 
     public  int  llamasEmpleadoExterior(Empleado empleado){
         int numLLamadas = 0;
-        for (Empleado empleadoEmpresa: this.empleados){
-            if(empleadoEmpresa.equals(empleado)){
-                numLLamadas++;
-            }
+        for (Llamada llamada: this.historialLlamadas){
+            llamada.obtenerMinutoExterior(empleado);
 
         }
         return  numLLamadas;
