@@ -49,7 +49,7 @@ public class Sistema {
             }
             empleadosTop.addLast(empleadoMax);
         }
-        while (i < empleadosTop.size() && i < 4){
+        while (i < empleadosTop.size() && i <= lenghtTop){
             System.out.println(empleadosTop.get(i).getNombre() + ": " + empleadosTop.get(i).calcNumLLamasExterior(this));
             i++;
         }
@@ -69,7 +69,7 @@ public class Sistema {
             }
             empleadosTop.addLast(empleadoMax);
         }
-        while (i < empleadosTop.size() && i < 4){
+        while (i < empleadosTop.size() && i <= lenghtTop ){
             System.out.println(empleadosTop.get(i).getNombre() + ": " + empleadosTop.get(i).calcNumLLamasExterior(this));
             i++;
         }
