@@ -30,8 +30,7 @@ public class Sistema {
     public  int  llamasEmpleadoExterior(Empleado empleado){
         int numLLamadas = 0;
         for (Llamada llamada: this.historialLlamadas){
-            llamada.obtenerMinutoExterior(empleado);
-
+            numLLamadas+= (int)llamada.obtenerMinutoExterior(empleado);
         }
         return  numLLamadas;
     }
@@ -43,7 +42,7 @@ public class Sistema {
         for (Empleado empleado: this.empleados){
             Empleado empleadoMax = empleado;
             for(Empleado empleado1: this.empleados){
-                if(!empleadosTop.contains(empleado) && empleadoMax.calcNumLLamasExterior(this) < empleado1.calcNumLLamasExterior(this) ){
+                if(!empleadosTop.contains(empleado1) && empleadoMax.calcNumLLamasExterior(this) < empleado1.calcNumLLamasExterior(this) ){
                     empleadoMax = empleado1;
                 }
 
@@ -54,6 +53,27 @@ public class Sistema {
             System.out.println(empleadosTop.get(i).getNombre() + ": " + empleadosTop.get(i).calcNumLLamasExterior(this));
             i++;
         }
+    }
+
+    public void ordenarRankingPorMinutosDescendente() {
+        ArrayList<Empleado> empleadosTop = new ArrayList<>();
+        int lenghtTop = 3;
+        int i = 0;
+        for (Empleado empleado: this.empleados){
+            Empleado empleadoMax = empleado;
+            for(Empleado empleado1: this.empleados){
+                if(! (empleadosTop.contains(empleado1)) && empleadoMax.calcNumLLamasExterior(this) > empleado1.calcNumLLamasExterior(this) ){
+                    empleadoMax = empleado1;
+                }
+
+            }
+            empleadosTop.addLast(empleadoMax);
+        }
+        while (i < empleadosTop.size() && i < 4){
+            System.out.println(empleadosTop.get(i).getNombre() + ": " + empleadosTop.get(i).calcNumLLamasExterior(this));
+            i++;
+        }
+
     }
 
 
@@ -104,5 +124,17 @@ public class Sistema {
 
     public ArrayList<Empleado> getEmpleados() {
         return empleados;
+    }
+
+    public void mostrarLlamadasDe(Empleado empleado) {
+        for(Llamada llamada: this.historialLlamadas){
+            if(empleado.equals(llamada.getEmpleadoOrigen())){
+                System.out.println("De :" + llamada.getEmpleadoOrigen().getNombre());
+                System.out.println("A :" + llamada.getEmpleadoDestino().getNombre());
+                System.out.println("Costo : " + llamada.calcularCosto());
+                System.out.println("Duracion: "+ llamada.getDuracion());
+                System.out.println("Fecha: "+ llamada.getFechaLlamada());
+            }
+        }
     }
 }

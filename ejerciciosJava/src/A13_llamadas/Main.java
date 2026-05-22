@@ -47,5 +47,8 @@ public class Main {
 
         System.out.println("=== Top empledos mas llamadas ===");
         sistema.topLlamadasExterior();
+
+        System.out.println("=== Top empledos menos llamadas ===");
+        sistema.ordenarRankingPorMinutosDescendente();
     }
 }
