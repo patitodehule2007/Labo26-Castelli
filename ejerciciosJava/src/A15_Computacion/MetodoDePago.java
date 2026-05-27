@@ -1,11 +1,10 @@
 package A15_Computacion;
 
+import A04_SeresVivos.Cliente_compu;
+
 public class MetodoDePago {
 
-    public MetodoDePago(double costo) {
-        this.costo = costo;
-    }
-    public double calcularCosto(){
-        return this.costo;
+    public double calcularCosto(double costo){
+        return costo;
     }
 }
