@@ -24,11 +24,8 @@ public class Computadora {
         int numComponentesEntrada = 0;
         int numComponentesSalida = 0;
         for(Componente componente:this.componentes){
-            if(componente instanceof DispositvoEntrada){
-                numComponentesEntrada++;
-            } else if (componente instanceof DispositivoSalida) {
-                numComponentesSalida++;
-            }
+            numComponentesSalida+= componente.cantidadSalida();
+            numComponentesEntrada+= componente.cantidadEntrada();
         }
         System.out.println("Componentes entrada: " + numComponentesEntrada);
         System.out.println("Componentes salida: " + numComponentesSalida);

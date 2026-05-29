@@ -75,10 +75,7 @@ public class Web {
 
             }
         }
-
-
         return  numCompra;
-
     }
 
     public  void  componenteMasComprado(){
@@ -93,6 +90,8 @@ public class Web {
         System.out.println("Nombre: " + componenteMasUsado.getNombreFabricante());
         System.out.println("Stock: " + componenteMasUsado.getStock());
     }
+
+
 
     public void  comprar(ArrayList<Computadora> computadoras, Cliente_compu cliente,MetodoDePago metodoDePago){
         ArrayList<Computadora> computadorasCheckeadas = new ArrayList<>();

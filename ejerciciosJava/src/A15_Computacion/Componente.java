@@ -59,4 +59,11 @@ public class Componente {
     public void setStock(int stock) {
         this.stock = stock;
     }
+    public int  cantidadEntrada(){
+        return 0;
+    }
+    public int  cantidadSalida(){
+        return 0;
+    }
+
 }

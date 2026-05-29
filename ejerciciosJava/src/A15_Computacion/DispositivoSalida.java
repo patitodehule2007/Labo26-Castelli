@@ -11,4 +11,8 @@ public class DispositivoSalida  extends Componente {
         this.numPuertos = numPuertos;
         this.metodoImpresion = metodoImpresion;
     }
+    @Override
+    public int  cantidadSalida(){
+        return 1;
+    }
 }
