@@ -3,7 +3,7 @@ package A15_Computacion;
 import java.util.ArrayList;
 
 public class Computadora {
-    ArrayList<Componente> componentes;
+    private ArrayList<Componente> componentes;
 
     public Computadora(ArrayList<Componente> componentes) {
         this.componentes = componentes;

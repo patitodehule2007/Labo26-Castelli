@@ -5,19 +5,10 @@ import A04_SeresVivos.Cliente_compu;
 import java.util.ArrayList;
 
 public class Web {
-    private ArrayList<Computadora>   computadoras;
     private ArrayList<Compra> compras;
     private ArrayList<Componente> componentes;
 
-    private ArrayList<Componente> getComponentes(){
-        ArrayList<Componente> componentes2 = new ArrayList<>();
-        for(Computadora computadora: this.computadoras){
-            for(Componente componente: computadora.getComponentes()) {
-                componentes2.add(componente);
-            }
-        }
-        return  componentes2;
-    }
+
 
     private boolean SacarComponentes(Computadora computadora){
         if(hayStock(computadora)){
@@ -53,7 +44,7 @@ public class Web {
             Componente currComputador = computadora.getComponentes().get(i);
 
             Componente curComp = computadora.getComponentes().get(i);
-            if(! this.getComponentes().contains(curComp)){
+            if(! this.componentes.contains(curComp)){
                 isValid = false;
             }
             if(curComp instanceof DispositvoEntrada){
@@ -76,11 +67,15 @@ public class Web {
 
     private int numUsoComponente(Componente componente){
         int numCompra = 0;
-        for(Computadora computadora: this.computadoras){
-            if(computadora.getComponentes().contains(componente)){
-                numCompra ++;
+        for(Compra compra: this.compras){
+            for(Computadora computadora: compra.getComputadora()){
+                if(computadora.getComponentes().contains(componente)){
+                    numCompra ++;
+                }
+
             }
         }
+
 
         return  numCompra;
 

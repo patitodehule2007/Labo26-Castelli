@@ -33,4 +33,28 @@ public class Compra {
         System.out.println("Precio con recargo: " + this.getCosto());
         System.out.println("Recargo: " +(this.calcularPrecio() - this.getCosto()));
     }
+
+    public Cliente_compu getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente_compu cliente) {
+        this.cliente = cliente;
+    }
+
+    public ArrayList<Computadora> getComputadora() {
+        return computadora;
+    }
+
+    public void setComputadora(ArrayList<Computadora> computadora) {
+        this.computadora = computadora;
+    }
+
+    public MetodoDePago getMetodoDePago() {
+        return metodoDePago;
+    }
+
+    public void setMetodoDePago(MetodoDePago metodoDePago) {
+        this.metodoDePago = metodoDePago;
+    }
 }
