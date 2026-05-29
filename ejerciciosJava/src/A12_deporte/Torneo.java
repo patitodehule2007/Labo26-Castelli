@@ -11,19 +11,19 @@ public class Torneo {
         this.listaPartidos = new ArrayList<>();
         this.listaEquipos =  new ArrayList<>();
     }
-    private String encontrarMatchHorarios(Equipo equipo1, Equipo equipo2){
-        ArrayList<String> horariosE1 = equipo1.getHorarioJuego();
-        ArrayList<String> horariosE2 = equipo2.getHorarioJuego();
-        if(horariosE1.contains("mañana") && horariosE2.contains("mañana")){
-            return  "mañana";
+    private Horario encontrarMatchHorarios(Equipo equipo1, Equipo equipo2){
+        ArrayList<Horario> horariosE1 = equipo1.getHorarioJuego();
+        ArrayList<Horario> horariosE2 = equipo2.getHorarioJuego();
+        if(horariosE1.contains(Horario.MAÑANA) && horariosE2.contains(Horario.MAÑANA)){
+            return  Horario.MAÑANA;
         }
-        else if(horariosE1.contains("tarde") && horariosE2.contains("tarde")){
-            return  "tarde";
+        else if(horariosE1.contains(Horario.TARDE) && horariosE2.contains(Horario.TARDE)){
+            return  Horario.TARDE;
         }
-        else if(horariosE1.contains("noche") && horariosE2.contains("noche")){
-            return  "noche";
+        else if(horariosE1.contains(Horario.NOCHE) && horariosE2.contains(Horario.NOCHE)){
+            return  Horario.NOCHE;
         }
-        else {return  "NOT_FOUND";}
+        else {return  null;}
 
     }
     // op code
@@ -83,7 +83,7 @@ public class Torneo {
             case 5:
                 return "no hay horarios en comun";
         }
-        String matchingFecha = this.encontrarMatchHorarios(equipo1,equipo2);
+        Horario matchingFecha = this.encontrarMatchHorarios(equipo1,equipo2);
         Partido partido = new Partido(equipo1,equipo2,fecha,matchingFecha);
         this.listaPartidos.add(partido);
         return  "exito";

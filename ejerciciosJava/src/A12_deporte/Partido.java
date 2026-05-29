@@ -6,9 +6,9 @@ public class Partido {
     private Equipo equipo1;
     private Equipo equipo2;
     private int fechaPartido;
-    private String horario;
+    private Horario horario;
 
-    public Partido(Equipo equipo1, Equipo equipo2, int fechaPartido, String horario) {
+    public Partido(Equipo equipo1, Equipo equipo2, int fechaPartido, Horario horario) {
         this.equipo1 = equipo1;
         this.equipo2 = equipo2;
 
@@ -45,11 +45,11 @@ public class Partido {
         this.fechaPartido = fechaPartido;
     }
 
-    public String getHorario() {
+    public Horario getHorario() {
         return horario;
     }
 
-    public void setHorario(String horario) {
+    public void setHorario(Horario horario) {
         this.horario = horario;
     }
 }

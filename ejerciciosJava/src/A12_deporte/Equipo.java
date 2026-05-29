@@ -6,10 +6,10 @@ import java.util.ArrayList;
 
 public class Equipo {
     private ArrayList<Participante> jugadores;
-    private ArrayList<String> horariosJuego;
+    private ArrayList<Horario> horariosJuego;
     private Participante capitan;
 
-    public Equipo(Participante capitan, ArrayList<String> horarioJuego, ArrayList<Participante> jugadores) {
+    public Equipo(Participante capitan, ArrayList<Horario> horarioJuego, ArrayList<Participante> jugadores) {
         int found = 0;
         // checkeamos si no se repiten cuando se agregan
         for (Participante p: jugadores) {
@@ -22,20 +22,18 @@ public class Equipo {
             // checkeamos capitan usando el metodo que filtra
             this.setCapitan(capitan);
         }
-        if(this.esHorarioValido(horarioJuego)) {
             this.horariosJuego = horarioJuego;
-        }
     }
     public ArrayList<Participante> getJugadores() {
         return jugadores;
     }
 
 
-    public ArrayList<String> getHorarioJuego() {
+    public ArrayList<Horario> getHorarioJuego() {
         return horariosJuego;
     }
 
-    public void setHorarioJuego(ArrayList<String> horarioJuego) {
+    public void setHorarioJuego(ArrayList<Horario> horarioJuego) {
         this.horariosJuego = horarioJuego;
     }
 
@@ -59,22 +57,10 @@ public class Equipo {
         }
         return  found;
     }
-    public boolean hasHorarioJuego(String horario){
+    public boolean hasHorarioJuego(Horario horario){
         return  this.horariosJuego.contains(horario);
     }
 
-    private boolean esHorarioValido(ArrayList<String> horarios){
-        ArrayList<String> Disphorarios = new ArrayList<>();
-        Disphorarios.add("mañana");
-        Disphorarios.add("tarde");
-        Disphorarios.add("noche");
-        for(String hora:horarios){
-            if(!(Disphorarios.contains(hora.toLowerCase()))){
-                return  false;
-            }
-        }
-        return  true;
-    }
     public String JugarPartido(Equipo equipo,int dia,Torneo torneo){
         return  torneo.agregarPartido(equipo,this,dia);
     }

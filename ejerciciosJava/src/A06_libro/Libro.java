@@ -8,18 +8,21 @@ import java.time.LocalDate;
 public class Libro {
     private String nombre;
     private Persona autor;
+    private Editorial editorial;
     private String isbn;
     private  int cantidadHojas;
     private Fecha fechaPublicacion;
 
-    public  Libro(String nombre,Persona autor,String isbn,int cantidadHojas,Fecha fechaPublicacion){
+    public Libro(String nombre, Persona autor, Editorial editorial, String isbn, int cantidadHojas, Fecha fechaPublicacion) {
         this.nombre = nombre;
         this.autor = autor;
+        this.editorial = editorial;
         this.isbn = isbn;
         this.cantidadHojas = cantidadHojas;
         this.fechaPublicacion = fechaPublicacion;
     }
-    public  Libro(Persona autor,String isbn,int cantidadHojas,Fecha fechaPublicacion){
+
+    public  Libro(Persona autor, String isbn, int cantidadHojas, Fecha fechaPublicacion){
         this.nombre = "las aventuras de pepe";
         this.autor = autor;
         this.isbn = isbn;
