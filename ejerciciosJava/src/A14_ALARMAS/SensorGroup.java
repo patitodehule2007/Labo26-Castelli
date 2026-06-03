@@ -21,7 +21,7 @@ public class SensorGroup extends Sensor {
 
     public void alarmar(){
         if(this.getMedida() >= this.getValorUmbral()) {
-            this.aleartar();
+            this.alertar();
         }
     }
 
