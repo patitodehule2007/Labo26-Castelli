@@ -19,8 +19,8 @@ public class main {
         }
 
 
-        ArrayList<String> horarioA = new ArrayList<>(Arrays.asList("mañana", "noche"));
-        ArrayList<String> horarioB = new ArrayList<>(Arrays.asList("tarde", "noche"));
+        ArrayList<Horario> horarioA = new ArrayList<>(Arrays.asList(Horario.MAÑANA, Horario.NOCHE));
+        ArrayList<Horario> horarioB = new ArrayList<>(Arrays.asList(Horario.TARDE, Horario.NOCHE));
 
 
         Equipo equipoA = new Equipo(listaA.get(0), horarioA, listaA);

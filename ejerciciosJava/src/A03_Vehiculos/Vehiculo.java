@@ -3,14 +3,14 @@ package A03_Vehiculos;
 import A16_Colores.Color;
 
 public class Vehiculo {
-    private String marca;
+    private Marca marca;
     private String modelo;
     private Color color;
     private int numRuedas;
     private int aniofabricacion;
 
 
-    public Vehiculo(String marca, String modelo, Color color, int numRuedas, int aniofabricacion) {
+    public Vehiculo(Marca marca, String modelo, Color color, int numRuedas, int aniofabricacion) {
         this.marca = marca;
         this.modelo = modelo;
         this.color = color;
@@ -18,11 +18,11 @@ public class Vehiculo {
         this.aniofabricacion = aniofabricacion;
     }
 
-    public String getMarca() {
+    public Marca getMarca() {
         return marca;
     }
 
-    public void setMarca(String marca) {
+    public void setMarca(Marca marca) {
         this.marca = marca;
     }
 
