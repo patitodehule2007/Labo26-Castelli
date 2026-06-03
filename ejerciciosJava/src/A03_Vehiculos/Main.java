@@ -1,9 +1,11 @@
 package A03_Vehiculos;
 
+import A16_Colores.Color;
+
 public class Main {
     public static void main(String[] args) {
         // Autos
-        Coche autoPrueba = new Coche("Marcedes","Ni idea", "negro",8,2000,799,"juan");
+        Coche autoPrueba = new Coche("Marcedes","Ni idea", Color.ROJO,8,2000,799,"juan");
         System.out.println("Marca: " + autoPrueba.getMarca());
         System.out.println("Velocidad: " + autoPrueba.getVelocidad());
         System.out.println("Acelerando..." );

@@ -1,11 +1,13 @@
 package A03_Vehiculos;
 
+import A16_Colores.Color;
+
 public class Camion extends Vehiculo {
     private String patente;
     private int capacidadCarga;
     private int carga;
 
-    public  Camion(String marca,String modelo, String color,int numeroRuedas,int anioFabricacion,double velocidad,String patente,int capacidadCarga){
+    public  Camion(String marca, String modelo, Color color, int numeroRuedas, int anioFabricacion, double velocidad, String patente, int capacidadCarga){
         super(marca,modelo,color,numeroRuedas,anioFabricacion);
         this.patente = patente;
         this.capacidadCarga = capacidadCarga;

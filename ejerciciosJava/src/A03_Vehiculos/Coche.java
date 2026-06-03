@@ -1,11 +1,13 @@
 package A03_Vehiculos;
 
+import A16_Colores.Color;
+
 public class Coche extends Vehiculo {
     private double velocidad;
     private String patente;
     private  boolean descapotable;
 
-    public  Coche(String marca,String modelo, String color,int numeroRuedas,int anioFabricacion,double velocidad,String patente){
+    public  Coche(String marca, String modelo, Color color, int numeroRuedas, int anioFabricacion, double velocidad, String patente){
         super(marca,modelo,color,numeroRuedas,anioFabricacion);
         this.velocidad = velocidad;
         this.patente = patente;
