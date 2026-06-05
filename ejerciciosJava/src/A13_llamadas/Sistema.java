@@ -111,7 +111,7 @@ public class Sistema {
             this.historialLlamadas.add(llamada);
         }
         else {
-            LlamadaInternacional llamadaInternacional = new LlamadaInternacional(empleadoOrigen,empleadoDestino, LocalDate.now(),duracion,empleadoOrigen.getProvincia(),empleadoDestino.getProvincia());
+            LlamadaInternacional llamadaInternacional = new LlamadaInternacional(empleadoOrigen,empleadoDestino, LocalDate.now(),duracion,"bolivia","utc + 19");
             this.historialLlamadas.add(llamadaInternacional);
         }
 

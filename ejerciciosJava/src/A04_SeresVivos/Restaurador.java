@@ -2,6 +2,7 @@ package A04_SeresVivos;
 
 import A05_Fechas.Fecha;
 import A08_Museo.Cuadro;
+import A08_Museo.EstadoCuadro;
 
 import java.time.LocalDate;
 
@@ -58,9 +59,9 @@ public class Restaurador extends Persona {
     public  void  restaurarObra(Cuadro cuadro){
         System.out.println("Antes de la restuaracion el cuadro estaba asi: " + cuadro.getEstado() + "/ 10");
         if (cuadro.getFechaCreacion().getAnio() -25 > LocalDate.now().getYear()){
-            cuadro.setEstado(cuadro.getEstado() + 2 > 10 ? 10 : cuadro.getEstado() + 2);
+            cuadro.setEstado(EstadoCuadro.BIEN);
         }else {
-            cuadro.setEstado(cuadro.getEstado() + 3 > 10 ? 10 : cuadro.getEstado() + 3);
+            cuadro.setEstado(EstadoCuadro.BIEN);
 
         }
         System.out.println("Ahora el cuadro esta asi: " + cuadro.getEstado() + "/ 10");
