@@ -91,7 +91,7 @@ public class Web {
         System.out.println("Stock: " + componenteMasUsado.getStock());
     }
 
-
+    
 
     public void  comprar(ArrayList<Computadora> computadoras, Cliente_compu cliente,MetodoDePago metodoDePago){
         ArrayList<Computadora> computadorasCheckeadas = new ArrayList<>();

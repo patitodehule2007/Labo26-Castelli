@@ -23,10 +23,10 @@ public class Main {
         // 4. Creamos Estudiantes
         // Nota: El constructor pide una lista de materias
         ArrayList<Materia> materiasJuan = new ArrayList<>(Arrays.asList(programacion, matematica));
-        Estudiante juan = new Estudiante("Juan", "Pérez","peru", LocalDate.of(2005, 5, 15), materiasJuan,"gi");
+        Estudiante juan = new Estudiante("Juan", "Pérez","peru", LocalDate.of(2005, 5, 15), materiasJuan,Clase.A);
 
         ArrayList<Materia> materiasAna = new ArrayList<>(Arrays.asList(programacion));
-        Estudiante ana = new Estudiante("Ana", "García","argentina", LocalDate.of(2003, 10, 20), materiasAna,"geof");
+        Estudiante ana = new Estudiante("Ana", "García","argentina", LocalDate.of(2003, 10, 20), materiasAna,Clase.C);
 
         // 5. Agregamos los estudiantes a las listas de las materias (Relación bidireccional)
         alumnosJava.add(juan);

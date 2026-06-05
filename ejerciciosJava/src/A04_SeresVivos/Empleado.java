@@ -1,6 +1,7 @@
 package A04_SeresVivos;
 
 import A13_llamadas.Llamada;
+import A13_llamadas.Provincia;
 import A13_llamadas.Sistema;
 
 import java.time.LocalDate;
@@ -10,10 +11,10 @@ public class Empleado extends Persona {
     private int dni;
     private String pais;
     private int numTelefono;
-    private  String provincia;
+    private Provincia provincia;
 
 
-    public Empleado(String nombre, String apellido, String direccion, LocalDate fechaNacimiento, int dni, String pais, int numTelefono, String provincia) {
+    public Empleado(String nombre, String apellido, String direccion, LocalDate fechaNacimiento, int dni, String pais, int numTelefono, Provincia provincia) {
         super(nombre, apellido, direccion, fechaNacimiento);
         this.dni = dni;
         this.pais = pais;
@@ -31,11 +32,11 @@ public class Empleado extends Persona {
       return  sistema.llamasEmpleadoExterior(this);
     }
 
-    public String getProvincia() {
+    public Provincia getProvincia() {
         return provincia;
     }
 
-    public void setProvincia(String provincia) {
+    public void setProvincia(Provincia provincia) {
         this.provincia = provincia;
     }
 

@@ -35,7 +35,7 @@ public class MainBuffet {
             System.out.println(p.getNombre() + " $" + p.getPrecio());
         }
 
-        Estudiante alumno1 = new Estudiante("Juan", "Perez", "Calle 123", LocalDate.of(2008, 5, 15), new ArrayList<>(), "5to A");
+        Estudiante alumno1 = new Estudiante("Juan", "Perez", "Calle 123", LocalDate.of(2008, 5, 15), new ArrayList<>(),Clase.C);
         Profesor prof1 = new Profesor("Marta", "Gomez", "Av. Siempreviva 742", LocalDate.of(1980, 10, 20), 20);
 
         buffet.ordenarPlato(alumno1, milanesa, LocalTime.of(12, 30));

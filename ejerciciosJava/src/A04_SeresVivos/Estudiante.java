@@ -1,5 +1,6 @@
 package A04_SeresVivos;
 
+import A11_Colegio.Clase;
 import A11_Colegio.Materia;
 
 import java.time.LocalDate;
@@ -8,11 +9,11 @@ import java.util.ArrayList;
 public class Estudiante extends PersonaColegio {
     private ArrayList<Materia> materias;
     private ArrayList<Integer> listaNotas;
-    private String clase;
+    private Clase clase;
 
 
 
-    public Estudiante(String nombre, String apellido,String direccion, LocalDate fechaNacimiento,ArrayList<Materia> materias,String clase) {
+    public Estudiante(String nombre, String apellido,String direccion, LocalDate fechaNacimiento,ArrayList<Materia> materias,Clase clase) {
 
         super(nombre,apellido,direccion,fechaNacimiento);
         this.materias = materias;

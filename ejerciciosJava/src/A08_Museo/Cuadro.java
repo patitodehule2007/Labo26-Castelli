@@ -7,11 +7,11 @@ import A05_Fechas.Fecha;
 public class Cuadro {
     String titulo;
     Persona pintor;
-    float estado;
+    EstadoCuadro estado;
     Fecha fechaCreacion;
     Persona restaurador;
 
-    public Cuadro(String titulo, Persona pintor, float estado, Fecha fechaCreacion, Persona restaurador) {
+    public Cuadro(String titulo, Persona pintor, EstadoCuadro estado, Fecha fechaCreacion, Persona restaurador) {
         this.titulo = titulo;
         this.pintor = pintor;
         this.estado = estado;
@@ -35,11 +35,11 @@ public class Cuadro {
         this.pintor = pintor;
     }
 
-    public float getEstado() {
+    public EstadoCuadro getEstado() {
         return estado;
     }
 
-    public void setEstado(float estado) {
+    public void setEstado(EstadoCuadro estado) {
         this.estado = estado;
     }
 

@@ -8,9 +8,9 @@ public class Main {
     public static void main(String[] args) {
         Sistema sistema = new Sistema();
 
-        Empleado emp1 = new Empleado("Lucas", "Castelli", "Calle 123", LocalDate.of(2000, 5, 15), 12345678, "Argentina", 111111, "Buenos Aires");
-        Empleado emp2 = new Empleado("Ana", "Gomez", "Av. Siempre Viva 742", LocalDate.of(1995, 3, 22), 87654321, "Argentina", 222222, "Cordoba");
-        Empleado emp3 = new Empleado("John", "Doe", "5th Avenue 100", LocalDate.of(1990, 7, 10), 55555555, "EEUU", 333333, "New York");
+        Empleado emp1 = new Empleado("Lucas", "Castelli", "Calle 123", LocalDate.of(2000, 5, 15), 12345678, "Argentina", 111111, Provincia.BUENOS_AIRES);
+        Empleado emp2 = new Empleado("Ana", "Gomez", "Av. Siempre Viva 742", LocalDate.of(1995, 3, 22), 87654321, "Argentina", 222222, Provincia.CABA);
+        Empleado emp3 = new Empleado("John", "Doe", "5th Avenue 100", LocalDate.of(1990, 7, 10), 55555555, "EEUU", 333333, Provincia.CHUBUT);
 
         sistema.contratarEmpleado(emp1);
         sistema.contratarEmpleado(emp2);
