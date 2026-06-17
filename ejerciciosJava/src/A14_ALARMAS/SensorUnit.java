@@ -2,7 +2,7 @@ package A14_ALARMAS;
 
 import java.time.LocalDate;
 
-public class SensorUnit  extends  Sensor{
+public abstract class SensorUnit  extends  Sensor{
     private LocalDate fechaAdquirido;
     private boolean estado;
 

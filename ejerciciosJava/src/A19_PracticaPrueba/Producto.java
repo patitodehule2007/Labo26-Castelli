@@ -2,7 +2,7 @@ package A19_PracticaPrueba;
 
 import java.time.LocalDate;
 
-public class Producto {
+public abstract class Producto {
     private LocalDate fechaVencimiento;
     private int numeroLote;
     private String nombre;
@@ -38,9 +38,7 @@ public class Producto {
     public LocalDate getFechaVencimiento() {
         return fechaVencimiento;
     }
-    public boolean envazoDespuesFresco(Producto comparacon){
-        return  false;
-    }
+    public abstract boolean envazoDespuesFresco(Producto comparacon);
 
     public int getCodigoIdentificacion() {
         return codigoIdentificacion;
@@ -52,7 +50,5 @@ public class Producto {
     public String getNombre() {
         return nombre;
     }
-    public String getInfoNutricional(){
-        return "833";
-    }
+    public abstract String getInfoNutricional();
 }

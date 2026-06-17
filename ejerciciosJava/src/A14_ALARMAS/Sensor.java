@@ -2,19 +2,16 @@ package A14_ALARMAS;
 
 import java.time.LocalDate;
 
-public class Sensor {
+public abstract class Sensor {
     private double valorUmbral;
 
     public Sensor(double valorUmbral) {
         this.valorUmbral = valorUmbral;
     }
-    public void alarmar(){
 
-    }
+    public abstract void alarmar();
 
-    public double getMedida(){
-        return  0;
-    }
+    public abstract double getMedida();
 
     public double getValorUmbral() {
         return valorUmbral;

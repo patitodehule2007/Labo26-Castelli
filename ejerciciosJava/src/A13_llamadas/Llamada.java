@@ -6,7 +6,7 @@ import A05_Fechas.Fecha;
 
 import java.time.LocalDate;
 
-public class Llamada {
+public abstract class Llamada {
     private Persona empleadoOrigen;
     private Persona empleadoDestino;
     private LocalDate fechaLlamada;
@@ -19,13 +19,9 @@ public class Llamada {
         this.fechaLlamada = fechaLlamada;
         this.duracion = duracion;
     }
-    public double obtenerMinutoExterior(Empleado empleado){
-        return  0;
-    }
+    public abstract double obtenerMinutoExterior(Empleado empleado);
 
-    public double calcularCosto(){
-        return 0;
-    }
+    public abstract double calcularCosto();
 
     public Persona getEmpleadoOrigen() {
         return empleadoOrigen;

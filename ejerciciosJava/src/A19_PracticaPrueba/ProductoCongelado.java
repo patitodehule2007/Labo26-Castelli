@@ -14,4 +14,9 @@ public class ProductoCongelado extends Producto {
     public String getInfoNutricional(){
         return "33";
     }
+
+    @Override
+    public boolean envazoDespuesFresco(Producto comparacion) {
+        return false;
+    }
 }

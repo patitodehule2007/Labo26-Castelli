@@ -2,7 +2,7 @@ package A03_Vehiculos;
 
 import A16_Colores.Color;
 
-public class Vehiculo {
+public abstract class Vehiculo {
     private Marca marca;
     private String modelo;
     private Color color;

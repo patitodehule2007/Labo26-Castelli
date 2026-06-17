@@ -6,7 +6,7 @@ import A11_Colegio.Plato;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-public class PersonaColegio extends Persona{
+public abstract class PersonaColegio extends Persona{
     public PersonaColegio(String nombre, String apellido, String direccion, LocalDate fechaNacimiento) {
         super(nombre, apellido, direccion, fechaNacimiento);
     }

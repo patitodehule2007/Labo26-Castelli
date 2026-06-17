@@ -17,4 +17,9 @@ public class LlamadaNacional  extends Llamada{
     public double calcularCosto() {
         return super.getDuracion() * 1.3;
     }
+
+    @Override
+    public double obtenerMinutoExterior(Empleado empleado) {
+        return 0;
+    }
 }
