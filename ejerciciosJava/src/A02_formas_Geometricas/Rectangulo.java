@@ -1,6 +1,6 @@
 package A02_formas_Geometricas;
 
-public class Rectangulo {
+public class Rectangulo extends FormaGeometrica {
     private double altura;
     private double base;
 
@@ -22,10 +22,11 @@ public class Rectangulo {
     public  void  setAltura(double altura){
         this.altura = altura;
     }
-
+    @Override
     public  double getArea(){
         return  this.altura * this.base;
     }
+    @Override
     public  double getPerimetro(){
         return  this.altura * 2 + this.base * 2;
     }
