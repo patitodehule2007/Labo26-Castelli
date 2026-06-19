@@ -12,4 +12,47 @@ public abstract class Plato {
         this.dificultad = dificultad;
         this.pasos = pasos;
     }
+
+    public abstract boolean isFromType(String type);
+
+    public boolean hasDificultad(Dificultad dificultad){
+        return this.dificultad == dificultad;
+    }
+
+    public int numPasos(){
+        return  this.pasos.size();
+    }
+    public  Plato platoMasPasos(Plato plato){
+        if(this.numPasos() > plato.numPasos()){
+            return this;
+        }
+        return plato;
+    }
+
+    public abstract void  mostrarPlatos();
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public Dificultad getDificultad() {
+        return dificultad;
+    }
+
+    public void setDificultad(Dificultad dificultad) {
+        this.dificultad = dificultad;
+    }
+
+    public ArrayList<String> getPasos() {
+        return pasos;
+    }
+
+    public void setPasos(ArrayList<String> pasos) {
+        this.pasos = pasos;
+    }
+
 }
