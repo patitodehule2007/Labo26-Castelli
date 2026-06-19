@@ -33,14 +33,14 @@ public class Main {
         sist.agregarPlato(p1);
         sist.agregarPlato(p2);
         sist.agregarPlato(p3);
-
-        System.out.println(sist.platoMasPasos().getPasos());
-
-        for(Plato plato: sist.getPlatosOfDificultar(Dificultad.FACIL)) {
+        System.out.println("platos mas pasos: ");
+        System.out.println(sist.platoMasPasos().getNombre());
+        System.out.println("platos de media dificultad: ");
+        for(Plato plato: sist.getPlatosOfDificultar(Dificultad.MEDIO)) {
             System.out.println(plato.getNombre());
         }
-
-        for(Plato plato: sist.getPlatoTipo("entrada")) {
+        System.out.println("Entradas: ");
+        for(Plato plato: sist.getPlatoTipo("Entrada")) {
             System.out.println(plato.getNombre());
         }
     }
