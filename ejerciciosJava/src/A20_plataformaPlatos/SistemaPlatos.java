@@ -46,7 +46,7 @@ public class SistemaPlatos {
         return  platoMasPaso;
     }
 
-    public ArrayList<Plato> getPlatoTipo(String tipo){
+    public ArrayList<Plato> getPlatoTipo(TipoPlato tipo){
         ArrayList<Plato> platosFiltrados = new ArrayList<>();
         for(Plato plato: this.platos){
             if(plato.isFromType(tipo)){

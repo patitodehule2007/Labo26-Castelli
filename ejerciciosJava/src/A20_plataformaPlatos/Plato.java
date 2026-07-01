@@ -13,7 +13,7 @@ public abstract class Plato {
         this.pasos = pasos;
     }
 
-    public abstract boolean isFromType(String type);
+    public abstract boolean isFromType(TipoPlato type);
 
     public boolean hasDificultad(Dificultad dificultad){
         return this.dificultad == dificultad;

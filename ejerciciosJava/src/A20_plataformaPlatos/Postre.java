@@ -23,7 +23,7 @@ public  class Postre extends  Plato{
     }
 
     @Override
-    public  boolean isFromType(String type){
-        return  type.equalsIgnoreCase("postre");
+    public  boolean isFromType(TipoPlato type){
+        return  type == (TipoPlato.POSTRE);
     }
 }

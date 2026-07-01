@@ -23,8 +23,8 @@ public class Entrada extends Plato {
 }
 
     @Override
-    public  boolean isFromType(String type){
-        return  type.equalsIgnoreCase("Entrada");
+    public  boolean isFromType(TipoPlato type){
+        return  type == TipoPlato.ENTRADA;
     }
 
 }

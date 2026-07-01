@@ -40,7 +40,7 @@ public class Main {
             System.out.println(plato.getNombre());
         }
         System.out.println("Entradas: ");
-        for(Plato plato: sist.getPlatoTipo("Entrada")) {
+        for(Plato plato: sist.getPlatoTipo(TipoPlato.ENTRADA)) {
             System.out.println(plato.getNombre());
         }
     }

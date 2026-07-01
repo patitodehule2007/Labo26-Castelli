@@ -21,7 +21,7 @@ public class PlatoPrincipal extends Plato {
         }
     }
     @Override
-    public  boolean isFromType(String type){
-        return  type.equalsIgnoreCase("PlatoPrincipal");
+    public  boolean isFromType(TipoPlato type){
+        return  type == TipoPlato.PLATO_PRINCIPAL;
     }
 }
