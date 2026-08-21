@@ -4,7 +4,12 @@ import java.util.ArrayList;
 
 public class Sistema {
     private ArrayList<Mascota> mascotas;
-    public void  saludar(String nombreDueno,String nombreMascota){
+
+    public Sistema() {
+        this.mascotas = new ArrayList<>();
+    }
+
+    public void saludar(String nombreDueno, String nombreMascota) {
 
     }
     private  boolean nombreDisponible(Mascota nuevaMascota){
@@ -40,8 +45,8 @@ public class Sistema {
     }
     public  void  saludarMascota(String nombreMascota,String nombreDueno){
         Mascota mascota = findMascotaByName(nombreMascota);
-        if( mascota== null){
-            mascota .saludar(nombreDueno);
+        if(mascota != null){
+            mascota.saludar(nombreDueno);
         }
 
     }
