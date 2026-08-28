@@ -8,8 +8,8 @@ public class Main {
         Sistema sistema = new Sistema();
 
         BebidaAzucarada coca = new BebidaAzucarada("Coca Cola", 35);
-        BebidaAlcoholica birra = new BebidaAlcoholica("Quilmes", 1.5, 0.8, 4.5);
-        BebidasNeutras agua = new BebidasNeutras("Agua", 5, 0);
+        BebidaAlcoholica birra = new BebidaAlcoholica("Quilmes", 0.8, 4.5);
+        BebidaNeutras agua = new BebidaNeutras("Agua", 5, 0);
 
         System.out.println("Coeficientes de hidratacion");
         System.out.println("Coca Cola: " + coca.getCoeficienteHidratacion());

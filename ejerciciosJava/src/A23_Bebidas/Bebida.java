@@ -1,11 +1,11 @@
 package A23_Bebidas;
 
-public abstract class Bebidas {
+public abstract class Bebida {
     private String nombre;
     private  double coeficientePositivo;
     private  double coeficienteNegativo;
 
-    public Bebidas(String nombre, double coeficientePositivo, double coeficienteNegativo) {
+    public Bebida(String nombre, double coeficientePositivo, double coeficienteNegativo) {
         this.nombre = nombre;
         this.coeficientePositivo = coeficientePositivo;
         this.coeficienteNegativo = coeficienteNegativo;

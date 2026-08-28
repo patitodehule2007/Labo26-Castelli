@@ -1,20 +1,20 @@
 package A23_Bebidas;
 
 public class Pedidos {
-    private Bebidas bebidas;
+    private Bebida bebida;
     private int cantidad;
 
-    public Pedidos(Bebidas bebidas, int cantidad) {
-        this.bebidas = bebidas;
+    public Pedidos(Bebida bebida, int cantidad) {
+        this.bebida = bebida;
         this.cantidad = cantidad;
     }
 
-    public Bebidas getBebidas() {
-        return bebidas;
+    public Bebida getBebidas() {
+        return bebida;
     }
 
-    public void setBebidas(Bebidas bebidas) {
-        this.bebidas = bebidas;
+    public void setBebidas(Bebida bebida) {
+        this.bebida = bebida;
     }
 
     public int getCantidad() {

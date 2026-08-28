@@ -1,7 +1,5 @@
 package A23_Bebidas;
 
-import A11_Colegio.Pedido;
-
 import java.util.ArrayList;
 
 public class Sistema {
@@ -48,7 +46,7 @@ public class Sistema {
         System.out.println(personaBebeMenosHidratacion);
     }
 
-    public void  consumir(PersonaBebe personaBebe,int cantidad,Bebidas bebida){
+    public void  consumir(PersonaBebe personaBebe, int cantidad, Bebida bebida){
         Pedidos pedido = new Pedidos(bebida,cantidad);
         personaBebe.consumirBebida(pedido);
     }

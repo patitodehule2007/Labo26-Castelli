@@ -1,6 +1,6 @@
 package A23_Bebidas;
 
-public class BebidaAzucarada extends  Bebidas{
+public class BebidaAzucarada extends Bebida {
     private double cantidadAzucar;
 
     public BebidaAzucarada(String nombre, double cantidadAzucar) {
