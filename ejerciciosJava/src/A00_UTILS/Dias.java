@@ -1,0 +1,5 @@
+package A00_UTILS;
+
+public enum Dias {
+    LUNES,MARTES,MIERCOLES,JUEVES,VIERNES,SABADO,DOMINGO
+}
