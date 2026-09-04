@@ -8,22 +8,11 @@ import java.util.HashSet;
 import java.util.Map;
 
 public class PersonaPeso extends  Persona{
-    private Medicion medicion;
     private HashMap<LocalDate,Medicion> historial;
 
-    public PersonaPeso(String nombre, String apellido, String direccion, LocalDate fechaNacimiento, Medicion medicion) {
+    public PersonaPeso(String nombre, String apellido, String direccion, LocalDate fechaNacimiento) {
         super(nombre, apellido, direccion, fechaNacimiento);
-        this.medicion = medicion;
         this.historial = new HashMap<>();
-        this.historial.put(fechaNacimiento, medicion);
-    }
-
-    public Medicion getMedicion() {
-        return medicion;
-    }
-
-    public void setMedicion(Medicion medicion) {
-        this.medicion = medicion;
     }
 
     public void agregarMedicion(LocalDate fecha, Medicion medicion) {

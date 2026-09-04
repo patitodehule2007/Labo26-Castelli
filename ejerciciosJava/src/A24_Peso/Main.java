@@ -6,12 +6,10 @@ import java.time.LocalDate;
 
 public class Main {
     public static void main(String[] args) {
-        Medicion m1 = new Medicion(170, 75);
-        PersonaPeso persona = new PersonaPeso("Juan", "Perez", "Pedro Moran 2818", LocalDate.of(2000, 5, 15), m1);
+        
+        PersonaPeso persona = new PersonaPeso("Juan", "Perez", "Pedro Moran 2818", LocalDate.of(2000, 5, 15));
 
         persona.mostrarDatos();
-        System.out.println("Medicion inicial: Peso=" + persona.getMedicion().getPeso() + "kg, Altura=" + persona.getMedicion().getAltura() + "cm");
-
         persona.agregarMedicion(LocalDate.of(2024, 3, 10), new Medicion(172, 78));
         persona.agregarMedicion(LocalDate.of(2024, 9, 20), new Medicion(172, 72));
         persona.agregarMedicion(LocalDate.of(2025, 1, 5), new Medicion(173, 80));
