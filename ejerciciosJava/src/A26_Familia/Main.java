@@ -10,10 +10,10 @@ import java.util.HashSet;
 public class Main {
     public static void main(String[] args) {
 
-        Platos milanesa = new Platos("Milanesa con papas", new HashSet<>(Arrays.asList("carne", "pan rallado", "huevo", "papa")), 850);
-        Platos ensalada = new Platos("Ensalada Cesar", new HashSet<>(Arrays.asList("lechuga", "pollo", "queso", "croutons")), 350);
-        Platos asado = new Platos("Asado", new HashSet<>(Arrays.asList("carne vacuna", "chorizo", "chimichurri")), 1200);
-        Platos fideos = new Platos("Fideos con tuco", new HashSet<>(Arrays.asList("fideos", "tomate", "carne picada")), 650);
+        Plato milanesa = new Plato("Milanesa con papas", new HashSet<>(Arrays.asList("carne", "pan rallado", "huevo", "papa")), 850);
+        Plato ensalada = new Plato("Ensalada Cesar", new HashSet<>(Arrays.asList("lechuga", "pollo", "queso", "croutons")), 350);
+        Plato asado = new Plato("Asado", new HashSet<>(Arrays.asList("carne vacuna", "chorizo", "chimichurri")), 1200);
+        Plato fideos = new Plato("Fideos con tuco", new HashSet<>(Arrays.asList("fideos", "tomate", "carne picada")), 650);
 
 
         Familiar juan = new Familiar("Juan", "Perez", "Av. Rivadavia 1234", LocalDate.of(1985, 5, 15));
@@ -89,8 +89,8 @@ public class Main {
 
         // 9. Todos los platos consumidos por la familia
         System.out.println("--- Todos los platos consumidos por la familia ---");
-        HashSet<Platos> todosLosPlatos = familiaPerez.getallPlatos(null);
-        for (Platos p : todosLosPlatos) {
+        HashSet<Plato> todosLosPlatoes = familiaPerez.getallPlatos(null);
+        for (Plato p : todosLosPlatoes) {
             System.out.println("- " + p.getNombre() + " (" + p.getNumCalorias() + " cal) ingredientes: " + p.getIngredientes());
         }
 

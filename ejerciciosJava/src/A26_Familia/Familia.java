@@ -21,7 +21,7 @@ public class Familia {
         familiares.remove(familiar);
     }
 
-    public  boolean  consumirPlato(Familiar familiar,Platos plato){
+    public  boolean  consumirPlato(Familiar familiar, Plato plato){
         if(familiares.contains(familiar)){ familiar.consumirPlato(plato);}
         return  false;
     }
@@ -49,10 +49,10 @@ public class Familia {
 
     }
 
-    public ArrayList<Familiar> getFamiliarQueComieronPlato(Platos platos){
+    public ArrayList<Familiar> getFamiliarQueComieronPlato(Plato plato){
         ArrayList<Familiar> familiaresComieronPlato = new ArrayList<>();
         for(Familiar familiar : this.familiares){
-            if(familiar.hasPlato(platos)){
+            if(familiar.hasPlato(plato)){
                 familiaresComieronPlato.add(familiar);
             }
         }
@@ -60,8 +60,8 @@ public class Familia {
     }
 
 
-    public HashSet<Platos> getallPlatos(Platos platos){
-        HashSet<Platos> familiaresComieronPlato = new HashSet<>();
+    public HashSet<Plato> getallPlatos(Plato plato){
+        HashSet<Plato> familiaresComieronPlato = new HashSet<>();
         for(Familiar familiar : this.familiares){
             familiaresComieronPlato.addAll(familiar.getPlatos().keySet());
 

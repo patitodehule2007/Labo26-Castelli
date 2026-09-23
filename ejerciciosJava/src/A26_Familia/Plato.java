@@ -2,12 +2,12 @@ package A26_Familia;
 
 import java.util.HashSet;
 
-public class Platos {
+public class Plato {
     private String nombre;
     private HashSet<String> ingredientes;
     private float numCalorias;
 
-    public Platos(String nombre, HashSet<String> ingredientes, float numCalorias) {
+    public Plato(String nombre, HashSet<String> ingredientes, float numCalorias) {
         this.nombre = nombre;
         this.ingredientes = ingredientes;
         this.numCalorias = numCalorias;

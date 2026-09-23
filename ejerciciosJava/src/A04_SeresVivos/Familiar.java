@@ -1,21 +1,21 @@
 package A04_SeresVivos;
 
 
-import A26_Familia.Platos;
+import A26_Familia.Plato;
 
 import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.Map;
 
 public class Familiar extends  Persona{
-    private HashMap<Platos,Integer> platos;
+    private HashMap<Plato,Integer> platos;
 
     public Familiar(String nombre, String apellido, String direccion, LocalDate fechaNacimiento) {
         super(nombre, apellido, direccion, fechaNacimiento);
         this.platos = new HashMap<>();
     }
 
-    public  boolean  consumirPlato(Platos plato){
+    public  boolean  consumirPlato(Plato plato){
         if(platos.containsValue(plato)){
 
             platos.put(plato,platos.get(plato ) + 1);
@@ -27,8 +27,8 @@ public class Familiar extends  Persona{
     public double getCalorias(){
 
         double caloriasTotal = 0;
-        for(Map.Entry<Platos,Integer> entry :this.platos.entrySet() ){
-            Platos plato = entry.getKey();
+        for(Map.Entry<Plato,Integer> entry :this.platos.entrySet() ){
+            Plato plato = entry.getKey();
             Integer cantidadPlato = entry.getValue();
             caloriasTotal+=plato.getNumCalorias() * cantidadPlato;
         }
@@ -38,8 +38,8 @@ public class Familiar extends  Persona{
     public double getPromedioCaloriasPlato(){
         double caloriasTotal = 0;
         int numPlato = 0;
-        for(Map.Entry<Platos,Integer> entry :this.platos.entrySet() ){
-            Platos plato = entry.getKey();
+        for(Map.Entry<Plato,Integer> entry :this.platos.entrySet() ){
+            Plato plato = entry.getKey();
             Integer cantidadPlato = entry.getValue();
             caloriasTotal+=plato.getNumCalorias() * cantidadPlato;
             numPlato+=cantidadPlato;
@@ -50,11 +50,11 @@ public class Familiar extends  Persona{
         return  caloriasTotal/numPlato;
     }
 
-    public boolean hasPlato(Platos plato){
+    public boolean hasPlato(Plato plato){
         return platos.containsValue(plato);
     }
 
-    public HashMap<Platos, Integer> getPlatos() {
+    public HashMap<Plato, Integer> getPlatos() {
         return platos;
     }
 }
