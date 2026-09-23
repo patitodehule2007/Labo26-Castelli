@@ -19,10 +19,17 @@ public class Main {
         System.out.println("tieneStock(5): " + cpu.tieneStock(5));
         System.out.println("tieneStock(15): " + cpu.tieneStock(15));
 
-
-        System.out.println("agarrarStock(3): " + cpu.agarrarStock(3));
+        try {
+            System.out.println("agarrarStock(3): " + cpu.agarrarStock(3));
+        } catch (StockInsuficienteException e) {
+            System.out.println("Error agarrarStock(3): " + e.getMessage());
+        }
         System.out.println("Stock despues de sacar 3: " + cpu.getStock());
-        System.out.println("agarrarStock(100): " + cpu.agarrarStock(100));
+        try {
+            System.out.println("agarrarStock(100): " + cpu.agarrarStock(100));
+        } catch (StockInsuficienteException e) {
+            System.out.println("Error agarrarStock(100): " + e.getMessage() + " (stock insuficiente capturado correctamente)");
+        }
 
         cpu.aumentarPrecioVenta(10);
         System.out.println("Precio tras aumentar 10%: $" + cpu.getPrecioVenta());
@@ -95,22 +102,202 @@ public class Main {
         System.out.println("--- 7. COMPRA ---");
         Cliente_compu cliente = new Cliente_compu("Lucas", "Castelli", "Calle 123", LocalDate.of(1990, 5, 10), 200000);
 
-        ArrayList<Computadora> compusCompra = new ArrayList<>();
-        compusCompra.add(pc1);
-        compusCompra.add(pc2);
+    
+        ArrayList<Computadora> compusCompraValida = new ArrayList<>();
+        compusCompraValida.add(pc1);
 
-        Compra compraEfectivo = new Compra(cliente, compusCompra, efectivo);
-        System.out.println("Compra en efectivo:");
-        compraEfectivo.mostrarCompraPlata();
+        try {
+  CPU cpuDemo = new CPU(5, 80000, "i7-12700", "Intel");
+            DispositvoEntrada tecladoDemo = new DispositvoEntrada(20, 3000, "K380", "Logitech", "Teclado", 1, "Bluetooth");
+            DispositvoEntrada mouseDemo = new DispositvoEntrada(30, 2000, "MX Master", "Logitech", "Mouse", 1, "Wireless");
+            DispositivoSalida monitorDemo = new DispositivoSalida(8, 45000, "27GL850", "LG", "Monitor", 2, "HDMI");
+            ArrayList<Componente> compDemo = new ArrayList<>();
+            compDemo.add(cpuDemo);
+            compDemo.add(tecladoDemo);
+            compDemo.add(monitorDemo);
+            Computadora pcValida = new Computadora(compDemo);
+            ArrayList<Computadora> compraValidaList = new ArrayList<>();
+            compraValidaList.add(pcValida);
+
+            Compra compraEfectivo = new Compra(cliente, compraValidaList, efectivo);
+            System.out.println("Compra válida en efectivo (debe tener éxito):");
+            compraEfectivo.mostrarCompraPlata();
+            System.out.println();
+
+
+            CPU cpuDemo2 = new CPU(5, 80000, "i7-12700", "Intel");
+            DispositvoEntrada tecladoDemo2 = new DispositvoEntrada(20, 3000, "K380", "Logitech", "Teclado", 1, "Bluetooth");
+            DispositivoSalida monitorDemo2 = new DispositivoSalida(8, 45000, "27GL850", "LG", "Monitor", 2, "HDMI");
+            ArrayList<Componente> compDemo2 = new ArrayList<>();
+            compDemo2.add(cpuDemo2);
+            compDemo2.add(tecladoDemo2);
+            compDemo2.add(monitorDemo2);
+            Computadora pcValida2 = new Computadora(compDemo2);
+            ArrayList<Computadora> compraValidaList2 = new ArrayList<>();
+            compraValidaList2.add(pcValida2);
+            Compra compraTarjeta = new Compra(cliente, compraValidaList2, tarjeta);
+            System.out.println("Compra válida con tarjeta (debe tener éxito, 5% recargo):");
+            compraTarjeta.mostrarCompraPlata();
+            System.out.println();
+        } catch (StockInsuficienteException e) {
+            System.out.println("Error de stock en compra válida (no debería pasar): " + e.getMessage());
+        } catch (CompraInvalidaException e) {
+            System.out.println("Error de compra inválida (no debería pasar): " + e.getMessage());
+        }
+
+     
+        System.out.println("--- 7b. PRUEBA COMPRA INVÁLIDA (falta dispositivo de entrada) ---");
+        System.out.println("pc2 tiene: CPU + DispositivoSalida pero NO tiene DispositvoEntrada");
+        System.out.println("Validación pc2: ");
+        try {
+            pc2.validarComponentesObligatorios();
+            System.out.println("pc2 validada (ERROR: debería haber fallado)");
+        } catch (CompraInvalidaException e) {
+            System.out.println("Correctamente detectada compra inválida: " + e.getMessage());
+        }
+        ArrayList<Computadora> compusInvalidas = new ArrayList<>();
+        compusInvalidas.add(pc2);
+        try {
+            Compra compraInvalida = new Compra(cliente, compusInvalidas, efectivo);
+            System.out.println("ERROR: compra inválida no lanzó excepción");
+            compraInvalida.mostrarCompraPlata();
+        } catch (CompraInvalidaException e) {
+            System.out.println("Compra no realizada por falta de componentes: " + e.getMessage());
+        } catch (StockInsuficienteException e) {
+            System.out.println("Error de stock inesperado: " + e.getMessage());
+        }
         System.out.println();
 
-        Compra compraTarjeta = new Compra(cliente, compusCompra, tarjeta);
-        System.out.println("Compra con tarjeta:");
-        compraTarjeta.mostrarCompraPlata();
+
+        System.out.println("--- 7c. PRUEBA COMPRA INVÁLIDA (falta CPU) ---");
+        ArrayList<Componente> compsSinCPU = new ArrayList<>();
+        compsSinCPU.add(new DispositvoEntrada(10, 3000, "K120", "Logitech", "Teclado", 1, "USB"));
+        compsSinCPU.add(new DispositivoSalida(10, 45000, "24MP", "LG", "Monitor", 1, "HDMI"));
+        Computadora pcSinCPU = new Computadora(compsSinCPU);
+        ArrayList<Computadora> listaSinCPU = new ArrayList<>();
+        listaSinCPU.add(pcSinCPU);
+        try {
+            Compra compraSinCPU = new Compra(cliente, listaSinCPU, efectivo);
+            System.out.println("ERROR: debería haber fallado por falta de CPU");
+        } catch (CompraInvalidaException e) {
+            System.out.println("Correctamente detectada falta de CPU: " + e.getMessage());
+        } catch (StockInsuficienteException e) {
+            System.out.println("Error de stock inesperado: " + e.getMessage());
+        }
         System.out.println();
 
+
+        System.out.println("--- 7d. PRUEBA COMPRA INVÁLIDA (falta dispositivo de salida) ---");
+        ArrayList<Componente> compsSinSalida = new ArrayList<>();
+        compsSinSalida.add(new CPU(5, 70000, "Ryzen 5", "AMD"));
+        compsSinSalida.add(new DispositvoEntrada(10, 3000, "K120", "Logitech", "Teclado", 1, "USB"));
+        Computadora pcSinSalida = new Computadora(compsSinSalida);
+        ArrayList<Computadora> listaSinSalida = new ArrayList<>();
+        listaSinSalida.add(pcSinSalida);
+        try {
+            Compra compraSinSalida = new Compra(cliente, listaSinSalida, efectivo);
+            System.out.println("ERROR: debería haber fallado por falta de salida");
+        } catch (CompraInvalidaException e) {
+            System.out.println("Correctamente detectada falta de salida: " + e.getMessage());
+        } catch (StockInsuficienteException e) {
+            System.out.println("Error de stock inesperado: " + e.getMessage());
+        }
+        System.out.println();
+
+        // --- Stock insuficiente ---
+        System.out.println("--- 7e. PRUEBA STOCK INSUFICIENTE ---");
+        Componente ramPocoStock = new Componente(1, 15000, "Fury 8GB", "Kingston");
+        ramPocoStock.setStock(1); // solo 1 unidad
+        CPU cpuStockOk = new CPU(10, 80000, "i5", "Intel");
+        DispositvoEntrada tecladoStock = new DispositvoEntrada(10, 3000, "K120", "Logitech", "Teclado", 1, "USB");
+        DispositivoSalida monitorStock = new DispositivoSalida(10, 45000, "24MP", "LG", "Monitor", 1, "HDMI");
+        // Creamos dos computadoras que usan el mismo objeto ramPocoStock (stock compartido)
+        ArrayList<Componente> compStock1 = new ArrayList<>();
+        compStock1.add(cpuStockOk);
+        compStock1.add(tecladoStock);
+        compStock1.add(monitorStock);
+        compStock1.add(ramPocoStock);
+        Computadora pcStock1 = new Computadora(compStock1);
+        ArrayList<Componente> compStock2 = new ArrayList<>();
+        // Reusamos el mismo ramPocoStock, con stock ya limitado
+        compStock2.add(new CPU(10, 80000, "i5-2", "Intel"));
+        compStock2.add(new DispositvoEntrada(10, 3000, "Mouse", "Logitech", "Mouse", 1, "USB"));
+        compStock2.add(new DispositivoSalida(10, 45000, "Monitor2", "Samsung", "Monitor", 1, "HDMI"));
+        compStock2.add(ramPocoStock);
+        Computadora pcStock2 = new Computadora(compStock2);
+
+        // Primera compra consume el único stock de ramPocoStock
+        ArrayList<Computadora> listaStock1 = new ArrayList<>();
+        listaStock1.add(pcStock1);
+        try {
+            Compra compraStock1 = new Compra(cliente, listaStock1, efectivo);
+            System.out.println("Primera compra con ramPocoStock: éxito, stock restante de RAM: " + ramPocoStock.getStock());
+        } catch (Exception e) {
+            System.out.println("Error primera compra: " + e.getMessage());
+        }
+        // Segunda compra debería fallar por stock insuficiente
+        ArrayList<Computadora> listaStock2 = new ArrayList<>();
+        listaStock2.add(pcStock2);
+        try {
+            Compra compraStock2 = new Compra(cliente, listaStock2, efectivo);
+            System.out.println("ERROR: segunda compra debería haber fallado por stock insuficiente");
+        } catch (StockInsuficienteException e) {
+            System.out.println("Correctamente detectado stock insuficiente: " + e.getMessage());
+            System.out.println("Compra no realizada, el usuario es informado.");
+        } catch (CompraInvalidaException e) {
+            System.out.println("Error compra inválida inesperado: " + e.getMessage());
+        }
+        System.out.println();
+
+        // --- Demostración con Web ---
+        System.out.println("--- 7f. PRUEBA WEB.COMPRAR CON EXCEPCIONES ---");
+        Web web = new Web();
+        web.agregarComponente(cpuStockOk);
+        web.agregarComponente(tecladoStock);
+        web.agregarComponente(monitorStock);
+        web.agregarComponente(ramPocoStock);
+        // Agregar componentes de pc válida
+        CPU cpuWeb = new CPU(5, 80000, "i7-Web", "Intel");
+        DispositvoEntrada tecladoWeb = new DispositvoEntrada(10, 3000, "KWeb", "Logitech", "Teclado", 1, "USB");
+        DispositivoSalida monitorWeb = new DispositivoSalida(10, 45000, "MWeb", "LG", "Monitor", 1, "HDMI");
+        web.agregarComponente(cpuWeb);
+        web.agregarComponente(tecladoWeb);
+        web.agregarComponente(monitorWeb);
+        ArrayList<Componente> compWeb = new ArrayList<>();
+        compWeb.add(cpuWeb);
+        compWeb.add(tecladoWeb);
+        compWeb.add(monitorWeb);
+        Computadora pcWeb = new Computadora(compWeb);
+        ArrayList<Computadora> listaWeb = new ArrayList<>();
+        listaWeb.add(pcWeb);
+        try {
+            web.comprar(listaWeb, cliente, efectivo);
+            System.out.println("Web.comprar válida: éxito");
+        } catch (StockInsuficienteException e) {
+            System.out.println("Web stock insuficiente: " + e.getMessage());
+        } catch (CompraInvalidaException e) {
+            System.out.println("Web compra inválida: " + e.getMessage());
+        }
+
+        // Intento con falta de componentes vía Web
+        ArrayList<Componente> compWebInvalida = new ArrayList<>();
+        compWebInvalida.add(cpuWeb);
+        compWebInvalida.add(monitorWeb); // falta entrada
+        Computadora pcWebInvalida = new Computadora(compWebInvalida);
+        ArrayList<Computadora> listaWebInvalida = new ArrayList<>();
+        listaWebInvalida.add(pcWebInvalida);
+        try {
+            web.comprar(listaWebInvalida, cliente, efectivo);
+            System.out.println("ERROR: web debería haber rechazado falta de entrada");
+        } catch (CompraInvalidaException e) {
+            System.out.println("Web correctamente rechazó compra inválida: " + e.getMessage());
+        } catch (StockInsuficienteException e) {
+            System.out.println("Error stock inesperado: " + e.getMessage());
+        }
+
+        System.out.println();
         System.out.println("========================================");
-        System.out.println("   PRUEBAS COMPLETADAS");
+        System.out.println("   PRUEBAS COMPLETADAS - EXCEPCIONES MANEJADAS");
         System.out.println("========================================");
     }
 }

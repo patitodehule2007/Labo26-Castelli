@@ -20,8 +20,19 @@ public class Componente {
     public void aumentarPrecioVenta(double porcentaje){
         this.precioVenta = this.precioVenta * (1 + porcentaje/100);
     }
-    public boolean  agarrarStock(int cantidad){
-        if(cantidad > stock){
+    public boolean agarrarStock(int cantidad) throws StockInsuficienteException {
+        if (cantidad > stock) {
+            throw new StockInsuficienteException(
+                "Stock insuficiente para " + nombreFabricante + " " + modelo +
+                ": solicitado " + cantidad + ", disponible " + stock,
+                this, stock, cantidad);
+        }
+        this.stock = this.stock - cantidad;
+        return true;
+    }
+
+    public boolean agarrarStockSinExcepcion(int cantidad) {
+        if (cantidad > stock) {
             return false;
         }
         this.stock = this.stock - cantidad;
@@ -29,7 +40,16 @@ public class Componente {
     }
 
     public boolean tieneStock(int cantidad){
-        return  cantidad >= this.stock;
+        return cantidad <= this.stock;
+    }
+
+    public void validarStock(int cantidad) throws StockInsuficienteException {
+        if (!tieneStock(cantidad)) {
+            throw new StockInsuficienteException(
+                "Stock insuficiente para " + nombreFabricante + " " + modelo +
+                ": solicitado " + cantidad + ", disponible " + stock,
+                this, stock, cantidad);
+        }
     }
 
     public String getNombreFabricante() {

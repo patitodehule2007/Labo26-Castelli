@@ -10,6 +10,10 @@ public class SensorGroup extends Sensor {
         this.sensoresGrupo = sensoresGrupo;
     }
 
+    public ArrayList<Sensor> getSensoresGrupo() {
+        return sensoresGrupo;
+    }
+
     public double getMedida() {
         if (sensoresGrupo.isEmpty()) return 0;
         double suma = 0;
