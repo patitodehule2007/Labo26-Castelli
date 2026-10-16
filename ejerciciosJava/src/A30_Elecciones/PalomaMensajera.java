@@ -17,9 +17,13 @@ public class PalomaMensajera extends Ave implements Mensajero {
     }
 
     @Override
-    public void enviarMensaje(String mensaje) {
-        if (this.aprendioMapa) {
-            System.out.println("Lanzando un papelito que dice: " + mensaje);
+    public void enviarMensaje(String mensaje) throws ErrorEnvioMensajeException {
+        if (mensaje == null || mensaje.isBlank()) {
+            throw new ErrorEnvioMensajeException("No se puede enviar un mensaje vacío.");
         }
+        if (!this.aprendioMapa) {
+            throw new ErrorEnvioMensajeException("La paloma todavía no aprendió el mapa.");
+        }
+        System.out.println("Lanzando un papelito que dice: " + mensaje);
     }
 }

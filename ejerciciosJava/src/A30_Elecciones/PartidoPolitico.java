@@ -37,7 +37,11 @@ public class PartidoPolitico {
 
     public void hacerCampania() {
         for (Mensajero mensajero : this.mensajeros) {
-            mensajero.enviarMensaje("Vote por el partido para un mejor futuro");
+            try {
+                mensajero.enviarMensaje("Vote por el partido para un mejor futuro");
+            } catch (ErrorEnvioMensajeException e) {
+                System.out.println("No se pudo enviar el mensaje: " + e.getMessage());
+            }
         }
     }
 }

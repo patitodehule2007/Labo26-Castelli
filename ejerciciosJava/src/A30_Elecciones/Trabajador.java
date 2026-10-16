@@ -72,9 +72,13 @@ public class Trabajador implements Mensajero {
     }
 
     @Override
-    public void enviarMensaje(String mensaje) {
-        if (estaEnHorarioLaboral(LocalTime.now())) {
-            System.out.println("Yo, " + this.nombre + " te invito a que... " + mensaje);
+    public void enviarMensaje(String mensaje) throws ErrorEnvioMensajeException {
+        if (mensaje == null || mensaje.isBlank()) {
+            throw new ErrorEnvioMensajeException("No se puede enviar un mensaje vacío.");
         }
+        if (!estaEnHorarioLaboral(LocalTime.now())) {
+            throw new ErrorEnvioMensajeException("El trabajador está fuera de su horario laboral.");
+        }
+        System.out.println("Yo, " + this.nombre + " te invito a que... " + mensaje);
     }
 }

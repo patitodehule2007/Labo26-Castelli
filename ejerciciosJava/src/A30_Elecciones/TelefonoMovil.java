@@ -41,9 +41,16 @@ public class TelefonoMovil extends Dispositivo implements Mensajero {
     }
 
     @Override
-    public void enviarMensaje(String mensaje) {
-        if (this.prendido && this.credito > 0) {
-            System.out.println("Conectando con la antena más cercana " + mensaje);
+    public void enviarMensaje(String mensaje) throws ErrorEnvioMensajeException {
+        if (mensaje == null || mensaje.isBlank()) {
+            throw new ErrorEnvioMensajeException("No se puede enviar un mensaje vacío.");
         }
+        if (!this.prendido) {
+            throw new ErrorEnvioMensajeException("El teléfono está apagado.");
+        }
+        if (this.credito <= 0) {
+            throw new ErrorEnvioMensajeException("El teléfono no tiene crédito.");
+        }
+        System.out.println("Conectando con la antena más cercana: " + mensaje);
     }
 }

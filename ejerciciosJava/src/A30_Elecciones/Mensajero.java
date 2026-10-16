@@ -1,5 +1,5 @@
 package A30_Elecciones;
 
 public interface Mensajero {
-    void enviarMensaje(String mensaje);
+    void enviarMensaje(String mensaje) throws ErrorEnvioMensajeException;
 }
