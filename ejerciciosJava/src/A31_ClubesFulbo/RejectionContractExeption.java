@@ -1,4 +1,4 @@
-package A31_ClubsFulbo;
+package A31_ClubesFulbo;
 
 public class RejectionContractExeption extends RuntimeException {
     public RejectionContractExeption(String message) {

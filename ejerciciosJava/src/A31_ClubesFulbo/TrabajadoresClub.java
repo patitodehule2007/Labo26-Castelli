@@ -1,7 +1,8 @@
-package A31_ClubsFulbo;
+package A31_ClubesFulbo;
 
 public interface TrabajadoresClub {
-     void  incorporarse(Club club) throws  RejectionContractExeption;
-     void  renovarContrato(Club club) throws  RejectionContractExeption;
+     void checkearIncorporacion(Club club) throws RejectionContractExeption ;
+     void checkearRenovacion() throws  RejectionContractExeption;
      String mostrarInformacion();
+     String getNombre();
 }
