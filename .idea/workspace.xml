@@ -1,21 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="6cb15631-3652-4e2b-9c5c-99355d9f6ce0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/ejerciciosJava/src/A04_SeresVivos/Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/ejerciciosJava/src/A04_SeresVivos/Persona.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ejerciciosJava/src/A04_SeresVivos/PersonaColegio.java" beforeDir="false" afterPath="$PROJECT_DIR$/ejerciciosJava/src/A04_SeresVivos/PersonaColegio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ejerciciosJava/src/A11_Colegio/Buffet.java" beforeDir="false" afterPath="$PROJECT_DIR$/ejerciciosJava/src/A11_Colegio/Buffet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ejerciciosJava/src/A11_Colegio/MainBuffet.java" beforeDir="false" afterPath="$PROJECT_DIR$/ejerciciosJava/src/A11_Colegio/MainBuffet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ejerciciosJava/src/A11_Colegio/Pedido.java" beforeDir="false" afterPath="$PROJECT_DIR$/ejerciciosJava/src/A11_Colegio/Pedido.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ejerciciosJava/src/A11_Colegio/Plato.java" beforeDir="false" afterPath="$PROJECT_DIR$/ejerciciosJava/src/A11_Colegio/Plato.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejerciciosJava/src/A33_pacientes/Fundacion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejerciciosJava/src/A33_pacientes/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejerciciosJava/src/A33_pacientes/NinoPaciente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejerciciosJava/src/A33_pacientes/TipoSangre.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejerciciosJava/src/A33_pacientes/Tratamiento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ejerciciosJava/src/A33_pacientes/Enum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ejerciciosJava/src/A33_pacientes/JovenTratable.java" beforeDir="false" afterPath="$PROJECT_DIR$/ejerciciosJava/src/A33_pacientes/JovenTratable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ejerciciosJava/src/A33_pacientes/Paciente.java" beforeDir="false" afterPath="$PROJECT_DIR$/ejerciciosJava/src/A33_pacientes/Paciente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ejerciciosJava/src/A33_pacientes/Tratable.java" beforeDir="false" afterPath="$PROJECT_DIR$/ejerciciosJava/src/A33_pacientes/Tratable.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="271" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;patitodehule2007&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/patitodehule2007/Labo26-Castelli.git&quot;,
+    &quot;accountId&quot;: &quot;1637843f-ab98-47fc-b862-413a2b374039&quot;
+  }
+}</component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="3.5380160782840856E-7" />
+      <entry key="MS500" value="0.11375660410427509" />
+      <entry key="S2" value="1.7495609727716686" />
+      <entry key="S5" value="3.739052276222882" />
+      <entry key="S10" value="5.098785712276171" />
+      <entry key="S30" value="7.509704199491648" />
+      <entry key="S60" value="10.271334229086044" />
+      <entry key="M2" value="15.376944288143475" />
+      <entry key="M5" value="27.036277242563532" />
+      <entry key="M10" value="41.15364836860457" />
+      <entry key="M15" value="52.66810093972142" />
+      <entry key="M30" value="75.62706203508806" />
+      <entry key="H1" value="96.1507933129855" />
+      <entry key="H2" value="110.28283028062472" />
+      <entry key="H4" value="118.63447237579875" />
+      <entry key="D1" value="126.36301139709641" />
+      <entry key="W1" value="127.76420282710436" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0000070302138229" />
+      <entry key="S2" value="1.051492622387994" />
+      <entry key="S5" value="1.3083685778736485" />
+      <entry key="S10" value="1.650301039280107" />
+      <entry key="S30" value="3.616246291976305" />
+      <entry key="S60" value="7.184042284024871" />
+      <entry key="M2" value="14.054899573556355" />
+      <entry key="M5" value="29.12497373869301" />
+      <entry key="M10" value="47.50367411093014" />
+      <entry key="M15" value="61.39367245970776" />
+      <entry key="M30" value="86.19628870734405" />
+      <entry key="H1" value="106.25044087546732" />
+      <entry key="H2" value="119.2951729963476" />
+      <entry key="H4" value="126.77814778258771" />
+      <entry key="D1" value="133.57488040730357" />
+      <entry key="W1" value="134.79502083235576" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="1.3221087386703789E-6" />
+      <entry key="MS500" value="0.14073195465844668" />
+      <entry key="S2" value="2.0222955819946664" />
+      <entry key="S5" value="4.488389487694786" />
+      <entry key="S10" value="6.352111945544486" />
+      <entry key="S30" value="10.829680650703597" />
+      <entry key="S60" value="17.19874472296076" />
+      <entry key="M2" value="29.22083917462253" />
+      <entry key="M5" value="56.01555416534206" />
+      <entry key="M10" value="88.54933183841538" />
+      <entry key="M15" value="113.97080517099877" />
+      <entry key="M30" value="161.75953839278407" />
+      <entry key="H1" value="202.36143917280393" />
+      <entry key="H2" value="229.55545504314847" />
+      <entry key="H4" value="245.40057324528914" />
+      <entry key="D1" value="259.9357658232875" />
+      <entry key="W1" value="262.55891690163963" />
+    </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6,
@@ -30,26 +123,26 @@
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/pato/Documents/Labo26-Castelli/ejerciciosJava"
+    "last_opened_file_path": "/home/pato/Documents/TP_Colegio/programacion/Labo26-Castelli",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.jshint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.jshint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "python.packages.toolwindow.project.migrated.to.right.top.v2": "true",
+    "settings.editor.selected.configurable": "http.proxy"
   }
 }]]></component>
   <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="Labo26-Castelli" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="Labo26-Castelli" />
-      <option name="filePath" />
-      <method v="2" />
-    </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="Labo26-Castelli" />
       <option name="ENV_FILES" value="" />
@@ -63,6 +156,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="true" />
       <option name="RUN_TOOL" value="" />
       <option name="SCRIPT_NAME" value="" />
       <option name="PARAMETERS" value="" />
@@ -83,6 +177,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="true" />
       <option name="RUN_TOOL" value="" />
       <method v="2" />
     </configuration>
@@ -90,7 +185,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.32098.37" />
+        <option value="bundled-jdk-30f59d01ecdd-a203e0a19954-intellij.indexing.shared.core-IU-262.10968.63" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.10968.63" />
       </set>
     </attachedChunks>
   </component>
@@ -103,5 +199,23 @@
       <updated>1778327195833</updated>
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
