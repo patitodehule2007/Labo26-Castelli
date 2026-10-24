@@ -121,6 +121,7 @@ public class Sistema {
             } catch (InputMismatchException e) {
                 System.out.println("Error: debe ingresar un número entero. Intente nuevamente.");
                 scanner.nextLine(); 
+            }
         }
 
         mostrarInformacionSensor(indice);

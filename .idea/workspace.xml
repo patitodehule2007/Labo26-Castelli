@@ -4,17 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6cb15631-3652-4e2b-9c5c-99355d9f6ce0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ejerciciosJava/src/A33_pacientes/Fundacion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ejerciciosJava/src/A33_pacientes/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ejerciciosJava/src/A33_pacientes/NinoPaciente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ejerciciosJava/src/A33_pacientes/TipoSangre.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ejerciciosJava/src/A33_pacientes/Tratamiento.java" afterDir="false" />
+    <list default="true" id="6cb15631-3652-4e2b-9c5c-99355d9f6ce0" name="Changes" comment="feat: ej 5">
+      <change afterPath="$PROJECT_DIR$/ejerciciosJava/src/A34_ejerciciosPrePrueba/BarArco.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejerciciosJava/src/A34_ejerciciosPrePrueba/Beneficio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejerciciosJava/src/A34_ejerciciosPrePrueba/BeneficioComida.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejerciciosJava/src/A34_ejerciciosPrePrueba/BeneficioGaseosa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejerciciosJava/src/A34_ejerciciosPrePrueba/BeneficioTrago.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejerciciosJava/src/A34_ejerciciosPrePrueba/BeneficiosAcumulables.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejerciciosJava/src/A34_ejerciciosPrePrueba/ColorDiana.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejerciciosJava/src/A34_ejerciciosPrePrueba/Diana.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejerciciosJava/src/A34_ejerciciosPrePrueba/DianaCircular.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejerciciosJava/src/A34_ejerciciosPrePrueba/DianaCuadrada.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejerciciosJava/src/A34_ejerciciosPrePrueba/DianaRectangular.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejerciciosJava/src/A34_ejerciciosPrePrueba/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejerciciosJava/src/A34_ejerciciosPrePrueba/Sistema.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ejerciciosJava/src/A33_pacientes/Enum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ejerciciosJava/src/A33_pacientes/JovenTratable.java" beforeDir="false" afterPath="$PROJECT_DIR$/ejerciciosJava/src/A33_pacientes/JovenTratable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ejerciciosJava/src/A33_pacientes/Paciente.java" beforeDir="false" afterPath="$PROJECT_DIR$/ejerciciosJava/src/A33_pacientes/Paciente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ejerciciosJava/src/A33_pacientes/Tratable.java" beforeDir="false" afterPath="$PROJECT_DIR$/ejerciciosJava/src/A33_pacientes/Tratable.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,12 +26,13 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="271" />
+    <option name="cachedIndexableFilesCount" value="274" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -53,61 +58,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="3.5380160782840856E-7" />
-      <entry key="MS500" value="0.11375660410427509" />
-      <entry key="S2" value="1.7495609727716686" />
-      <entry key="S5" value="3.739052276222882" />
-      <entry key="S10" value="5.098785712276171" />
-      <entry key="S30" value="7.509704199491648" />
-      <entry key="S60" value="10.271334229086044" />
-      <entry key="M2" value="15.376944288143475" />
-      <entry key="M5" value="27.036277242563532" />
-      <entry key="M10" value="41.15364836860457" />
-      <entry key="M15" value="52.66810093972142" />
-      <entry key="M30" value="75.62706203508806" />
-      <entry key="H1" value="96.1507933129855" />
-      <entry key="H2" value="110.28283028062472" />
-      <entry key="H4" value="118.63447237579875" />
-      <entry key="D1" value="126.36301139709641" />
-      <entry key="W1" value="127.76420282710436" />
+      <entry key="MS100" value="2.7690889856152836E-36" />
+      <entry key="MS500" value="7.735126095260897E-8" />
+      <entry key="S2" value="0.01705476958349107" />
+      <entry key="S5" value="0.30231688602854334" />
+      <entry key="S10" value="1.3961099582563135" />
+      <entry key="S30" value="6.185855672961952" />
+      <entry key="S60" value="10.597823596970892" />
+      <entry key="M2" value="16.90982841178165" />
+      <entry key="M5" value="36.066578526517795" />
+      <entry key="M10" value="69.10810136001987" />
+      <entry key="M15" value="98.44576794962205" />
+      <entry key="M30" value="164.01631428547452" />
+      <entry key="H1" value="239.80769679427007" />
+      <entry key="H2" value="306.94468762071824" />
+      <entry key="H4" value="353.9036091929511" />
+      <entry key="D1" value="402.8905303613007" />
+      <entry key="W1" value="412.38338267501905" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0000070302138229" />
-      <entry key="S2" value="1.051492622387994" />
-      <entry key="S5" value="1.3083685778736485" />
-      <entry key="S10" value="1.650301039280107" />
-      <entry key="S30" value="3.616246291976305" />
-      <entry key="S60" value="7.184042284024871" />
-      <entry key="M2" value="14.054899573556355" />
-      <entry key="M5" value="29.12497373869301" />
-      <entry key="M10" value="47.50367411093014" />
-      <entry key="M15" value="61.39367245970776" />
-      <entry key="M30" value="86.19628870734405" />
-      <entry key="H1" value="106.25044087546732" />
-      <entry key="H2" value="119.2951729963476" />
-      <entry key="H4" value="126.77814778258771" />
-      <entry key="D1" value="133.57488040730357" />
-      <entry key="W1" value="134.79502083235576" />
+      <entry key="MS500" value="1.0000287118783293" />
+      <entry key="S2" value="1.0778634621078174" />
+      <entry key="S5" value="1.5255560618357848" />
+      <entry key="S10" value="2.3022280554000325" />
+      <entry key="S30" value="5.864682073171271" />
+      <entry key="S60" value="10.286452471217686" />
+      <entry key="M2" value="17.324262485283228" />
+      <entry key="M5" value="37.512597052819125" />
+      <entry key="M10" value="70.45568239153718" />
+      <entry key="M15" value="99.93079874112144" />
+      <entry key="M30" value="167.72504805470197" />
+      <entry key="H1" value="247.38428967292103" />
+      <entry key="H2" value="317.59623045006333" />
+      <entry key="H4" value="366.270961072211" />
+      <entry key="D1" value="416.6357549780996" />
+      <entry key="W1" value="426.34761168905897" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.3221087386703789E-6" />
-      <entry key="MS500" value="0.14073195465844668" />
-      <entry key="S2" value="2.0222955819946664" />
-      <entry key="S5" value="4.488389487694786" />
-      <entry key="S10" value="6.352111945544486" />
-      <entry key="S30" value="10.829680650703597" />
-      <entry key="S60" value="17.19874472296076" />
-      <entry key="M2" value="29.22083917462253" />
-      <entry key="M5" value="56.01555416534206" />
-      <entry key="M10" value="88.54933183841538" />
-      <entry key="M15" value="113.97080517099877" />
-      <entry key="M30" value="161.75953839278407" />
-      <entry key="H1" value="202.36143917280393" />
-      <entry key="H2" value="229.55545504314847" />
-      <entry key="H4" value="245.40057324528914" />
-      <entry key="D1" value="259.9357658232875" />
-      <entry key="W1" value="262.55891690163963" />
+      <entry key="MS100" value="5.647891522975037E-4" />
+      <entry key="MS500" value="0.2240690272862688" />
+      <entry key="S2" value="0.7363262067836776" />
+      <entry key="S5" value="1.4993590668815688" />
+      <entry key="S10" value="3.3470533508328324" />
+      <entry key="S30" value="11.727331006132124" />
+      <entry key="S60" value="20.6201879321791" />
+      <entry key="M2" value="34.021165185320086" />
+      <entry key="M5" value="73.3977042524345" />
+      <entry key="M10" value="139.3990471249097" />
+      <entry key="M15" value="198.2260078817809" />
+      <entry key="M30" value="331.6216665226077" />
+      <entry key="H1" value="487.10611094601103" />
+      <entry key="H2" value="624.4862454361852" />
+      <entry key="H4" value="720.1430911649886" />
+      <entry key="D1" value="819.5203147262619" />
+      <entry key="W1" value="838.7301213243178" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -122,15 +127,18 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Application.Main.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/pato/Documents/TP_Colegio/programacion/Labo26-Castelli",
+    "last_opened_file_path": "/home/pato/Documents/TP_Colegio/programacion/Labo26-Castelli/ejerciciosJava",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.jshint": "true",
     "node.js.detected.package.tslint": "true",
@@ -138,11 +146,28 @@
     "node.js.selected.package.jshint": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
     "python.packages.toolwindow.project.migrated.to.right.top.v2": "true",
-    "settings.editor.selected.configurable": "http.proxy"
+    "settings.editor.selected.configurable": "project.propCompiler",
+    "to.speed.mode.migration.done": "true"
   }
 }]]></component>
   <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A34_ejerciciosPrePrueba.Main" />
+      <module name="Labo26-Castelli" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="A34_ejerciciosPrePrueba.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="Labo26-Castelli" />
       <option name="ENV_FILES" value="" />
@@ -181,6 +206,11 @@
       <option name="RUN_TOOL" value="" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -213,6 +243,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: ej 5" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: ej 5" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

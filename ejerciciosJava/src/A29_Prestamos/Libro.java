@@ -11,7 +11,7 @@ public class Libro extends Publicacion {
     }
 
     @Override
-    boolean cumpleRequisitoPrestamo() {
+    public boolean cumpleRequisitoPrestamo() {
         return paginasPorCapitulo.size() % 2 != 0;
     }
 
